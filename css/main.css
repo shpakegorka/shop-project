@@ -103,6 +103,20 @@
 
 /* Base */
 
+* {
+  box-sizing: border-box;
+}
+
+.aside-banner {
+  background-color: var(--color-neutral-b900);
+}
+
+.view {
+  margin: 0 auto;
+  max-width: 1116px;
+}
+
+
 a {
   text-decoration: none;
 }
@@ -150,6 +164,9 @@ label {
 .banner {
   background-color: var(--color-neutral-b900);
   color: var(--color-neutral-w900);
+  text-align: center;
+  height: 40px;
+  padding: 8px 0;
 }
 
 /* Hero-section */
