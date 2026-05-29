@@ -107,13 +107,23 @@
   box-sizing: border-box;
 }
 
+body {
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, span {
+  margin-top: 0;
+}
+
 .aside-banner {
   background-color: var(--color-neutral-b900);
 }
 
-.view {
+.container {
+  padding: 0 24px;
   margin: 0 auto;
-  max-width: 1116px;
+  width: 100%;
+  max-width: 1140px;
 }
 
 
@@ -167,26 +177,51 @@ label {
   text-align: center;
   height: 40px;
   padding: 8px 0;
+  margin-bottom: 0;
 }
 
 /* Hero-section */
 
 .hero-section {
   background-color: var(--color-neutral-w100);
+  margin-bottom: 88px;
+}
+
+/* Advantages-section */
+.advantages-section {
+  margin-bottom: 72px;
+}
+
+/* Product-section */
+.products-section {
+  margin-bottom: 168px;
 }
 
 /* Browsing-section */
 
 .browsing-section {
   background-color: var(--color-neutral-w100);
+  margin-bottom: 152px;
+}
+
+/* Latest-product-section */
+.latest-product-section {
+  margin-bottom: 192px;
 }
 
 /* Pre-footer-section */
 
 .pre-footer-section {
   background-color: var(--color-neutral-w100);
+  margin-bottom: 74px;
 }
 
+
+/* Footer */
+
+.footer {
+  margin-bottom: 104px;
+}
 
 /* Button */
 .button {
@@ -196,6 +231,7 @@ label {
   color: var(--color-neutral-w900);
   border: none;
   border-radius: 4px;
+  padding: 10px 24px;
 }
 
 .button:hover {
