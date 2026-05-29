@@ -14,19 +14,19 @@
       </div>
     </aside>
     <div class="container">
-      <nav>
+      <nav class="header__container">
         <a href="./index.html"><img src="./images/svg/logo.svg" alt="logo"></a>
-        <ul>
+        <ul class="header__container__list">
           <li><a href="#">Home</a></li>
-          <li><a href="#">Categories</a></li>
+          <li><a href="#">Categories <span>&#709</span></a></li>
           <li><a href="#">About</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
         <input type="text" name="" id="">
         <label for="">Search products</label>
         <div>
-          <button type="button">Button 1</button>
-          <button type="button">Button 2</button>
+          <button class="hero-section__button__cart" type="button">Button 1</button>
+          <button class="hero-section__button__user" type="button">Button 2</button>
         </div>
       </nav>
     </div>
@@ -34,40 +34,42 @@
   <main>
     <section class="hero-section">
       <div class="container">
-        <div class="text">
-          <h1>Fresh Arrivals Online</h1>
-          <p>Discover Our Newest Collection Today.</p>
-          <button class="button" type="button">View Colection &#8594</button>
-        </div>
-        <div class="images">
-          <img src="./images/svg/starsvg.svg" alt="Star">
-          <img src="./images/svg/ellipse.svg" alt="Elipse">
-          <img src="./images/man-white-t-shirt.png" alt="Men">
+        <div class="hero-section__container">
+          <div class="text">
+            <h1>Fresh Arrivals Online</h1>
+            <p>Discover Our Newest Collection Today.</p>
+            <button class="button" type="button">View Colection &#8594</button>
+          </div>
+          <div class="images">
+            <img src="./images/svg/starsvg.svg" alt="Star">
+            <img src="./images/svg/ellipse.svg" alt="Elipse">
+            <img src="./images/man-white-t-shirt.png" alt="Men">
+          </div>
         </div>
       </div>
     </section>
     <section class="advantages-section">
       <div class="container">
-        <ul>
-          <li>
+        <ul class="advantages-section__list">
+          <li class="advantages-section__list__item">
             <article>
-              <img src="./images/svg/delivery-car.svg" alt="Delivery Car">
-              <h2>Free Shiping</h2>
+              <img class="advantages-section__list__item__image" src="./images/svg/delivery-car.svg" alt="Delivery Car">
+              <h5 class="advantages-section__list__item__heading">Free Shiping</h5>
               <p>Upgrade your style today and get FREE shiping on all orders! Don`t miss out.</p>
             </article>
           </li>
-          <li>
+          <li class="advantages-section__list__item">
             <article>
-              <img src="./images/svg/medal.svg" alt="Medal">
-              <h2>Satisfaction Guarantee</h2>
+              <img class="advantages-section__list__item__image" src="./images/svg/medal.svg" alt="Medal">
+              <h5 class="advantages-section__list__item__heading">Satisfaction Guarantee</h5>
               <p>Shop confidently with our Satisfaction Guarantee: Love it or get a refund.</p>
             </article>
           </li>
-          <li>
+          <li class="advantages-section__list__item">
             <article>
-              <img src="./images/svg/security.svg" alt="Security">
-              <h2>Secure Payment</h2>
-              <p>Your is our priority. Your payments are secure with us.</p>
+              <img class="advantages-section__list__item__image" src="./images/svg/security.svg" alt="Security">
+              <h5 class="advantages-section__list__item__heading">Secure Payment</h5>
+              <p>Your security is our priority. Your payments are secure with us.</p>
             </article>
           </li>
         </ul>
@@ -75,126 +77,133 @@
     </section>
     <section class="products-section">
       <div class="container">
-        <h2>Best Selling</h2>
-        <ul>
-          <li>
-            <article>
-              <a href="#">
-                <img src="./images/black-t-shirt.png" alt="t-shirt black">
-                <div>
-                  <p>Classic Monohrome Tees</p>
+        <div class="products-section__container">
+          <p>SHOP NOW</p>
+          <h3>Best Selling</h3>
+          <ul class="section__list">
+            <li>
+              <article class="section__list__item">
+                <a href="#">
+                  <img class="section__list__image" src="./images/black-t-shirt.png" alt="t-shirt black">
                   <div>
-                    <span>IN STOCK</span>
-                    <p>$35.00</p>
+                    <p class="section__list__text">Classic Monohrome Tees</p>
+                    <div class="section__list__container">
+                      <span class="section__list__label">IN STOCK</span>
+                      <p>$35.00</p>
+                    </div>
                   </div>
-                </div>
-              </a>
-            </article>
-          </li>
-          <li>
-            <article>
-              <a href="#">
-                <img src="./images/brown-t-shirt.png" alt="t-shirt brown">
-                <div>
-                  <p>Monohromatic Wardrobe</p>
+                </a>
+              </article>
+            </li>
+            <li>
+              <article class="section__list__item">
+                <a href="#">
+                  <img class="section__list__image" src="./images/brown-t-shirt.png" alt="t-shirt brown">
                   <div>
-                    <span>IN STOCK</span>
-                    <p>$27.00</p>
+                    <p class="section__list__text">Monohromatic Wardrobe</p>
+                    <div class="section__list__container">
+                      <span class="section__list__label">IN STOCK</span>
+                      <p>$27.00</p>
+                    </div>
                   </div>
-                </div>
-              </a>
-            </article>
-          </li>
-          <li>
-            <article>
-              <a href="#">
-                <img src="./images/white-t-shirt.png" alt="t-shirt white">
-                <div>
-                  <p>Essential Neutrals</p>
+                </a>
+              </article>
+            </li>
+            <li>
+              <article class="section__list__item">
+                <a href="#">
+                  <img class="section__list__image" src="./images/white-t-shirt.png" alt="t-shirt white">
                   <div>
-                    <span>IN STOCK</span>
-                    <p>$22.00</p>
+                    <p class="section__list__text">Essential Neutrals</p>
+                    <div class="section__list__container">
+                      <span class="section__list__label">IN STOCK</span>
+                      <p>$22.00</p>
+                    </div>
                   </div>
-                </div>
-              </a>
-            </article>
-          </li>
-          <li>
-            <article>
-              <a href="#">
-                <img src="./images/utraanet-black-t-shirt.png" alt="t-shirt black">
-                <div>
-                  <p>UTRAANET Black</p>
+                </a>
+              </article>
+            </li>
+            <li>
+              <article class="section__list__item">
+                <a href="#">
+                  <img class="section__list__image" src="./images/utraanet-black-t-shirt.png" alt="t-shirt black">
                   <div>
-                    <span>IN STOCK</span>
-                    <p>$43.00</p>
+                    <p class="section__list__text">UTRAANET Black</p>
+                    <div class="section__list__container">
+                      <span class="section__list__label">IN STOCK</span>
+                      <p>$43.00</p>
+                    </div>
                   </div>
-                </div>
-              </a>
-            </article>
-          </li>
-        </ul>
+                </a>
+              </article>
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
     <section class="browsing-section">
       <div class="container">
-        <div>
-          <h2>Browse Our Fashion Paradise!</h2>
-          <p>Step into a world of style and explore our diverse collection of clothing categories.</p>
-          <button class="button" type="button">Start Browsing &#8594</button>
+        <div class="browsing-section__container">
+          <div>
+            <h3 class="browsing-section__heading">Browse Our Fashion Paradise!</h3>
+            <p class="browsing-section__text">Step into a world of style and explore our diverse collection of clothing categories.</p>
+            <button class="button" type="button">Start Browsing &#8594</button>
+          </div>
+          <img class="browsing-section__image" src="./images/blouse.png" alt="Blouse">
         </div>
-        <img src="./images/blouse.png" alt="Blouse">
       </div>
     </section>
     <section class="latest-product-section">
       <div class="container">
-        <div>
-          <button type="button">Featured</button>
-          <button type="button">Latest</button>
-          <ul>
+        <div class="latest-product-section__container">
+          <div class="latest-product-section__container__button">
+            <button class="latest-product-section__button" type="button">Featured</button>
+          <button class="latest-product-section__button" type="button">Latest</button>
+        </div>
+          <ul class="section__list">
             <li>
-              <article>
-                <img src="./images/sweater-black.png" alt="sweater black">
+              <article class="section__list__item">
+                <img class="section__list__image" src="./images/sweater-black.png" alt="sweater black">
                 <div>
-                  <p>Elegant Ebony Sweatshirts</p>
-                  <div>
-                    <span>IN STOCK</span>
+                  <p class="section__list__text">Elegant Ebony Sweatshirts</p>
+                  <div class="section__list__container">
+                    <span class="section__list__label">IN STOCK</span>
                     <p>$35.00</p>
                   </div>
                 </div>
               </article>
             </li>
             <li>
-              <article>
-                <img src="./images/khudi-black.png" alt="hudi blach">
+              <article class="section__list__item">
+                <img class="section__list__image" src="./images/khudi-black.png" alt="hudi blach">
                 <div>
-                  <p>Sleek and Cozy Black</p>
-                  <div>
-                    <span>IN STOCK</span>
+                  <p class="section__list__text">Sleek and Cozy Black</p>
+                  <div class="section__list__container">
+                    <span class="section__list__label">IN STOCK</span>
                     <p>$57.00</p>
                   </div>
                 </div>
               </article>
             </li>
             <li>
-              <article>
-                <img src="./images/t-shirt-gray.png" alt="t-shirt gray">
+              <article class="section__list__item">
+                <img class="section__list__image" src="./images/t-shirt-gray.png" alt="t-shirt gray">
                 <div>
-                  <p>Raw Black Tees</p>
-                  <div>
-                    <span>IN STOCK</span>
+                  <p class="section__list__text">Raw Black Tees</p>
+                  <div class="section__list__container">
+                    <span class="section__list__label">IN STOCK</span>
                     <p>$19.00</p>
                   </div>
                 </div>
               </article>
             </li>
             <li>
-              <article>
-                <img src="./images/t-shirt-black.png" alt="t-shirt black">
+              <article class="section__list__item">
+                <img class="section__list__image" src="./images/t-shirt-black.png" alt="t-shirt black">
                 <div>
-                  <p>MOCKUP Black</p>
-                  <div>
-                    <span>IN STOCK</span>
+                  <p class="section__list__text">MOCKUP Black</p>
+                  <div class="section__list__container">
+                    <span class="section__list__label">IN STOCK</span>
                     <p>$30.00</p>
                   </div>
                 </div>
@@ -202,30 +211,31 @@
             </li>
           </ul>
         </div>
-        <div></div>
       </div>
     </section>
     <section class="pre-footer-section">
       <div class="container">
-        <div>
-          <h2>Join Our Newsletter</h2>
-          <p>We love to surprise our subscribers with occasional gifts.</p>
-        </div>
-        <div>
-          <input type="text" name="" id="">
-          <label for="">Your email adress</label>
-          <button class="button subscribe-button" type="button">Subscribe</button>
+        <div class="pre-footer-section__container">
+          <div class="pre-footer-section__container__text">
+            <h3>Join Our Newsletter</h3>
+            <p>We love to surprise our subscribers with occasional gifts.</p>
+          </div>
+          <div>
+            <input type="text" name="" id="">
+            <label for="">Your email adress</label>
+            <button class="button subscribe-button" type="button">Subscribe</button>
+          </div>
         </div>
       </div>
     </section>
   </main>
   <footer>
     <div class="container">
-      <div class="footer">
-        <div>
-          <a href="./index.html"><img src="./images/svg/footer-logo.svg" alt="logo"></a>
-          <p>DevCut is a YouTube channel for practical project-based learning.</p>
-          <div>
+      <div class="footer__container">
+        <div class="footer__container__logos">
+          <a href="./index.html"><img class="footer__container__logo" src="./images/svg/footer-logo.svg" alt="logo"></a>
+          <p class="footer__container__logos__text">DevCut is a YouTube channel for practical project-based learning.</p>
+          <div class="footer__container__logos__socials">
             <a href="#" target="_blank">
               <img src="./images/svg/Github.svg" alt="github-icon">
             </a>
@@ -237,38 +247,38 @@
             </a>
           </div>
         </div>
-        <div>
+        <div class="footer__container__text">
           <div>
-            <h2>SUPPORT</h2>
+            <p class="footer__container__text__heading">SUPPORT</p>
             <a href="#">
-              <p>FAQ</p>
+              <p class="footer__container__text__paragraph">FAQ</p>
             </a>
             <a href="#">
-              <p>Terms of use</p>
+              <p class="footer__container__text__paragraph">Terms of use</p>
             </a>
             <a href="#">
               <p>Privacy Policy</p>
             </a>
           </div>
           <div>
-            <h2>COMPANY</h2>
+            <p class="footer__container__text__heading">COMPANY</p>
             <a href="#">
-              <p>About us</p>
+              <p class="footer__container__text__paragraph">About us</p>
             </a>
             <a href="#">
-              <p>Contact us</p>
+              <p class="footer__container__text__paragraph">Contact us</p>
             </a>
             <a href="#">
               <p>Careers</p>
             </a>
           </div>
           <div>
-            <h2>SHOP</h2>
+            <p class="footer__container__text__heading">SHOP</p>
             <a href="#">
-              <p>My Account</p>
+              <p class="footer__container__text__paragraph">My Account</p>
             </a>
             <a href="#">
-              <p>Checkout</p>
+              <p class="footer__container__text__paragraph">Checkout</p>
             </a>
             <a href="#">
               <p>Cart</p>
@@ -276,15 +286,17 @@
           </div>
         </div>
         <div>
-          <h2>ACCEPTED PAYMENTS</h2>
-          <div>
+          <p class="footer__container__text__payments">ACCEPTED PAYMENTS</p>
+          <div class="footer__container__payments__logos">
             <img src="./images/svg/Mastercard.svg" alt="mastercard-logo-payment">
             <img src="./images/svg/Amex.svg" alt="amex-logo-payment">
             <img src="./images/svg/Visa.svg" alt="visa-logo-payment">
           </div>
         </div>
       </div>
-      <p>&copy 2023 DevCut. All rights reserved.</p>
+      <div class="footer__ended__container">
+        <p class="footer__ended__text">&copy 2023 DevCut. All rights reserved.</p>
+      </div>
     </div>
   </footer>
 </body>
