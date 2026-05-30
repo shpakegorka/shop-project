@@ -22,11 +22,19 @@
           <li><a href="#">About</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
-        <input type="text" name="" id="">
-        <label for="">Search products</label>
-        <div>
-          <button class="hero-section__button__cart" type="button">Button 1</button>
-          <button class="hero-section__button__user" type="button">Button 2</button>
+        <input class="user__searcher" type="text" name="" id="">
+        <label class="user__searcher__label" for="">Search products</label>
+        <div class="header-section__buttons">
+          <button class="header-section__button" type="button">
+            <svg height="18" width="18">
+              <use href="/images/svg/icons.svg#icon-cart_button"></use>
+            </svg>
+        </button>
+          <button class="header-section__button" type="button">
+            <svg height="18" width="18">
+              <use href="/images/svg/icons.svg#icon-User_button"></use>
+            </svg>
+          </button>
         </div>
       </nav>
     </div>
@@ -36,14 +44,12 @@
       <div class="container">
         <div class="hero-section__container">
           <div class="text">
-            <h1>Fresh Arrivals Online</h1>
-            <p>Discover Our Newest Collection Today.</p>
+            <h2 class="hero-section__container__heading">Fresh Arrivals Online</h2>
+            <p class="hero-section__container__paragraph">Discover Our Newest Collection Today.</p>
             <button class="button" type="button">View Colection &#8594</button>
           </div>
           <div class="images">
-            <img src="./images/svg/starsvg.svg" alt="Star">
-            <img src="./images/svg/ellipse.svg" alt="Elipse">
-            <img src="./images/man-white-t-shirt.png" alt="Men">
+            <img class="hero-section__image" src="./images/man-white-t-shirt.png" alt="Men">
           </div>
         </div>
       </div>
@@ -53,21 +59,27 @@
         <ul class="advantages-section__list">
           <li class="advantages-section__list__item">
             <article>
-              <img class="advantages-section__list__item__image" src="./images/svg/delivery-car.svg" alt="Delivery Car">
+              <svg class="advantages-section__list__item__image" width="48" height="48">
+                <use href="/images/svg/icons.svg#icon-delivery-car"></use>
+              </svg>
               <h5 class="advantages-section__list__item__heading">Free Shiping</h5>
               <p>Upgrade your style today and get FREE shiping on all orders! Don`t miss out.</p>
             </article>
           </li>
           <li class="advantages-section__list__item">
             <article>
-              <img class="advantages-section__list__item__image" src="./images/svg/medal.svg" alt="Medal">
+              <svg class="advantages-section__list__item__image" width="48" height="48">
+                <use href="/images/svg/icons.svg#icon-medal"></use>
+              </svg>
               <h5 class="advantages-section__list__item__heading">Satisfaction Guarantee</h5>
               <p>Shop confidently with our Satisfaction Guarantee: Love it or get a refund.</p>
             </article>
           </li>
           <li class="advantages-section__list__item">
             <article>
-              <img class="advantages-section__list__item__image" src="./images/svg/security.svg" alt="Security">
+              <svg class="advantages-section__list__item__image" width="48" height="48">
+                <use href="/images/svg/icons.svg#icon-security"></use>
+              </svg>
               <h5 class="advantages-section__list__item__heading">Secure Payment</h5>
               <p>Your security is our priority. Your payments are secure with us.</p>
             </article>
@@ -81,7 +93,7 @@
           <p>SHOP NOW</p>
           <h3>Best Selling</h3>
           <ul class="section__list">
-            <li>
+            <li class="section__list__li">
               <article class="section__list__item">
                 <a href="#">
                   <img class="section__list__image" src="./images/black-t-shirt.png" alt="t-shirt black">
@@ -95,7 +107,7 @@
                 </a>
               </article>
             </li>
-            <li>
+            <li class="section__list__li">
               <article class="section__list__item">
                 <a href="#">
                   <img class="section__list__image" src="./images/brown-t-shirt.png" alt="t-shirt brown">
@@ -109,7 +121,7 @@
                 </a>
               </article>
             </li>
-            <li>
+            <li class="section__list__li">
               <article class="section__list__item">
                 <a href="#">
                   <img class="section__list__image" src="./images/white-t-shirt.png" alt="t-shirt white">
@@ -123,7 +135,7 @@
                 </a>
               </article>
             </li>
-            <li>
+            <li class="section__list__li">
               <article class="section__list__item">
                 <a href="#">
                   <img class="section__list__image" src="./images/utraanet-black-t-shirt.png" alt="t-shirt black">
@@ -161,7 +173,7 @@
           <button class="latest-product-section__button" type="button">Latest</button>
         </div>
           <ul class="section__list">
-            <li>
+            <li class="section__list__li">
               <article class="section__list__item">
                 <img class="section__list__image" src="./images/sweater-black.png" alt="sweater black">
                 <div>
@@ -173,7 +185,7 @@
                 </div>
               </article>
             </li>
-            <li>
+            <li class="section__list__li">
               <article class="section__list__item">
                 <img class="section__list__image" src="./images/khudi-black.png" alt="hudi blach">
                 <div>
@@ -185,7 +197,7 @@
                 </div>
               </article>
             </li>
-            <li>
+            <li class="section__list__li">
               <article class="section__list__item">
                 <img class="section__list__image" src="./images/t-shirt-gray.png" alt="t-shirt gray">
                 <div>
@@ -197,7 +209,7 @@
                 </div>
               </article>
             </li>
-            <li>
+            <li class="section__list__li">
               <article class="section__list__item">
                 <img class="section__list__image" src="./images/t-shirt-black.png" alt="t-shirt black">
                 <div>
@@ -233,17 +245,25 @@
     <div class="container">
       <div class="footer__container">
         <div class="footer__container__logos">
-          <a href="./index.html"><img class="footer__container__logo" src="./images/svg/footer-logo.svg" alt="logo"></a>
+          <a href="./index.html">
+            <img class="footer__container__logo" src="./images/svg/footer-logo.svg" alt="logo">
+          </a>
           <p class="footer__container__logos__text">DevCut is a YouTube channel for practical project-based learning.</p>
           <div class="footer__container__logos__socials">
             <a href="#" target="_blank">
-              <img src="./images/svg/Github.svg" alt="github-icon">
+              <svg height="24" width="24">
+                <use href="/images/svg/icons.svg#icon-Github"></use>
+              </svg>
             </a>
             <a href="#" target="_blank">
-              <img src="./images/svg/Instagram.svg" alt="instagram-icon">
+              <svg height="24" width="24">
+                <use href="/images/svg/icons.svg#icon-Instagram"></use>
+              </svg>
             </a>
             <a href="#" target="_blank">
-              <img src="./images/svg/Youtube.svg" alt="youtube-icon">
+              <svg height="24" width="24">
+                <use href="/images/svg/icons.svg#icon-Youtube"></use>
+              </svg>
             </a>
           </div>
         </div>
@@ -288,9 +308,15 @@
         <div>
           <p class="footer__container__text__payments">ACCEPTED PAYMENTS</p>
           <div class="footer__container__payments__logos">
-            <img src="./images/svg/Mastercard.svg" alt="mastercard-logo-payment">
-            <img src="./images/svg/Amex.svg" alt="amex-logo-payment">
-            <img src="./images/svg/Visa.svg" alt="visa-logo-payment">
+            <svg width="30" height="32">
+              <use href="/images/svg/icons.svg#icon-Mastercard"></use>
+            </svg>
+            <svg width="56" height="32">
+              <use href="/images/svg/icons.svg#icon-Amex"></use>
+            </svg>
+            <svg width="42" height="32">
+              <use href="/images/svg/icons.svg#icon-Visa"></use>
+            </svg>
           </div>
         </div>
       </div>
