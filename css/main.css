@@ -219,26 +219,50 @@ label {
   gap: 32px;
 }
 
+.search-image {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+}
+
+.user-search {
+  position: relative;
+}
+
 .user__searcher {
   width: 264px;
   height: 45px;
-  border: 1px solid var(--color-neutral-b200);
+  border: 1px solid var(--color-neutral-b100);
   border-radius: 6px;
+  padding: 10px 20px 10px 48px;
+  color: var(--color-neutral-b500);
+  font-family: 'Inter', sans-serif;
+}
+
+.user__searcher:focus {
+  border-color: var(--color-neutral-b300);
+  outline: none;
+}
+
+.user__searcher:focus + .user__searcher__label {
+  display: none;
+}
+
+.user__searcher:not(:placeholder-shown)+ .user__searcher__label {
+  display: none;
 }
 
 .user__searcher__label {
+  position: absolute;
+  left: 48px;
+  top: 10px;
   display: flex;
   align-items: center;
+  pointer-events: none;
 }
 
-.user__searcher__label::before {
-  content: "";
-  margin-right: 8px;
-  display: inline-block;
-  height: 24px;
-  width: 24px;
-  background-image: url(/images/svg/Search.svg);
-  background-size: contain;
+.user__searcher__label:hover {
+  cursor: text;
 }
 
 .header-section__buttons {
@@ -261,12 +285,12 @@ label {
 /* Hero-section */
 
 .hero-section {
-  position: relative;
   background-color: var(--color-neutral-w100);
   margin-bottom: 88px;
 }
 
 .hero-section__container {
+  position: relative;
   padding: 136px 0 ;
   display: flex;
   flex-direction: row;
@@ -291,7 +315,7 @@ label {
   height: 340px;
   width: 340px;
   bottom: 11px;
-  right: 180px;
+  right: 0;
   background-image: url(/images/svg/ellipse.svg);
   background-repeat: no-repeat;
   z-index: 0;
@@ -304,7 +328,7 @@ label {
   height: 38px;
   width: 38px;
   top: 92px;
-  right: 472px;
+  right: 295px;
   background-image: url(/images/svg/starsvg.svg);
   background-repeat: no-repeat;
   z-index: 0;
@@ -313,7 +337,7 @@ label {
 .hero-section__image {
   position: absolute;
   top: 66px;
-  right: 174px;
+  right: 0px;
   z-index: 1;
 }
 
@@ -358,7 +382,9 @@ label {
 
 .section__list {
   display: flex;
+  overflow: hidden;
   flex-wrap: wrap;
+  justify-content: center;
   padding-left: 0;
   gap: 20px;
 }
