@@ -220,9 +220,12 @@ label {
 }
 
 .search-image {
+  height: 46px;
+  width: 48px;
+  padding: 11px 12px;
   position: absolute;
-  top: 10px;
-  left: 15px;
+  top: 0px;
+  left: 0px;
 }
 
 .user-search {
@@ -397,6 +400,12 @@ label {
   padding: 16px 8px;
 }
 
+.section__list__item:hover {
+  transform: scale(1.05);
+  transition: 0.5s;
+  box-shadow: 0px 2px 3px 0px var(--color-neutral-b100), 2px 0px 3px 0px var(--color-neutral-b100);
+}
+
 .section__list__text {
   color: var(--color-neutral-b900);
   margin-bottom: 12px;
@@ -463,6 +472,32 @@ label {
   align-items: center;
 }
 
+.featured-product-section__button {
+  background-color: transparent;
+  border: 1px solid var(--color-neutral-w200);
+  border-radius: 25px;
+  padding: 3px 16px;
+  color: var(--color-neutral-b900);
+}
+
+.featured-product-section__button:hover {
+  cursor: pointer;
+}
+
+.latest-product-section__button {
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 3px 16px;
+  color: var(--color-neutral-b500);
+}
+
+.latest-product-section__button:hover {
+  cursor: pointer;
+  border: 1px solid var(--color-neutral-w200);
+  border-radius: 25px;
+  color: var(--color-neutral-b900);
+}
+
 /* Pre-footer-section */
 
 .pre-footer-section {
@@ -478,6 +513,53 @@ label {
 
 .pre-footer-section__container__text {
   flex-grow: 1;
+}
+
+.user-email {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.user-email__input {
+  padding: 10px 15px;
+  width: 320px;
+  height: 45px;
+  border: 1px solid var(--color-neutral-b100);
+  border-radius: 6px;
+  color: var(--color-neutral-b500);
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.user-email__input:focus {
+  border-color: var(--color-neutral-b300);
+  outline: none;
+}
+
+.user-email__input__label {
+  position: absolute;
+  left: 15px;
+  top: 10px;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.user-email__input__label:hover {
+  cursor: text;
+}
+
+.user-email__input:focus +
+.user-email__input__label {
+  display: none;
+}
+
+.user-email__input:not(:placeholder-shown) +
+.user-email__input__label {
+  display: none;
 }
 
 /* Footer */
@@ -566,4 +648,10 @@ label {
 
 .subscribe-button {
   width: 116px;
+}
+
+.buttons-center {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
