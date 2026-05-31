@@ -55,5 +55,8 @@
 <path fill="#fff" style="fill: var(--color1, #fff)" d="M24.386 15.328c0.374 0.371 0.374 0.973 0 1.345l-7.381 7.328-1.354-1.345 6.703-6.655-6.703-6.655 1.354-1.345 7.381 7.328z"></path>
 <path fill="#fff" style="fill: var(--color1, #fff)" d="M23.996 16.951h-16.663v-1.902h16.663v1.902z"></path>
 </symbol>
+<symbol id="icon-Chevron-Down" viewBox="0 0 32 32">
+<path fill="#5c5f6a" style="fill: var(--color1, #5c5f6a)" d="M16.71 19.749c-0.369 0.332-0.971 0.335-1.345 0.006l-7.366-6.49 1.338-1.203 6.69 5.895 6.621-5.956 1.352 1.191-7.29 6.558z"></path>
+</symbol>
 </defs>
 </svg>
