@@ -37,6 +37,7 @@
   border-radius: 5px;
   height: fit-content;
   padding: 24px 14px 32px 18px;
+  max-width: 248px;
 }
 
 .left-bar__categories__heading {
@@ -126,6 +127,7 @@
 
 .colors__container {
   display: flex;
+  flex-wrap: wrap;
   gap: 18px;
 }
 
@@ -143,6 +145,18 @@
 
 .left-bar__color__semantic-green::before {
   background-color: var(--color-semantic-green-g400);
+}
+
+.left-bar__color__primary-brown:before {
+  background-color: var(--color-primary-brown-b100);
+}
+
+.left-bar__color__primary-dark:before {
+  background-color: var(--color-neutral-b900);
+}
+
+.left-bar__color__primary-white:before {
+  background-color: var(--color-neutral-w100);
 }
 
 .left-bar__color__label::before {
@@ -371,6 +385,12 @@
   color: var(--color-neutral-b900);
 }
 
+.filters__button:hover {
+  cursor: pointer;
+  background-color: var(--color-neutral-w100);
+  color: var(--color-neutral-b500);
+}
+
 
 .buttons-container {
   display: flex;
@@ -389,13 +409,16 @@
 
 
 .dropdown-menu__sorted {
-  display: flex;
-  align-items: center;
-  gap: 8px;
   display: inline-flex;
   position: relative;
   cursor: pointer;
-  padding-right: 4px;
+}
+
+.dropdown-menu__text {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-right: 8px;
 }
 
 .dropdown-menu__sorted:hover .dropdown-menu__container {
@@ -446,6 +469,54 @@
   transition-duration: 0.5s;
   z-index: 6;
 }
+
+
+
+
+
+
+/* Покращення стилів для плашок applied filters */
+.filters__button {
+  display: inline-flex;
+  align-items: center;
+  background-color: transparent;
+  border: 1px solid var(--color-neutral-b100);
+  border-radius: 25px;
+  padding: 6px 14px;
+  gap: 6px;
+  color: var(--color-neutral-b900);
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.filters__button svg {
+  color: var(--color-neutral-b400);
+  transition: color 0.2s ease;
+}
+
+.filters__button:hover {
+  border-color: var(--color-neutral-b900);
+  background-color: var(--color-neutral-w100);
+}
+
+.filters__button:hover svg {
+  color: var(--color-neutral-b900);
+  /* Хрестик стає темнішим при наведенні */
+}
+
+/* Контейнер для кнопок робимо гнучким флексом */
+.buttons-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+
 
 
 .products-section__container {
