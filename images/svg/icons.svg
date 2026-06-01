@@ -58,5 +58,10 @@
 <symbol id="icon-Chevron-Down" viewBox="0 0 32 32">
 <path fill="#5c5f6a" style="fill: var(--color1, #5c5f6a)" d="M16.71 19.749c-0.369 0.332-0.971 0.335-1.345 0.006l-7.366-6.49 1.338-1.203 6.69 5.895 6.621-5.956 1.352 1.191-7.29 6.558z"></path>
 </symbol>
+<symbol id="icon-select-box" viewBox="0 0 32 32">
+<path fill="#474b57" style="fill: var(--color1, #474b57)" d="M5.333 1.778h21.333c1.964 0 3.556 1.592 3.556 3.556v21.333c0 1.964-1.592 3.556-3.556 3.556h-21.333c-1.964 0-3.556-1.592-3.556-3.556v-21.333c0-1.964 1.592-3.556 3.556-3.556z"></path>
+<path fill="none" stroke="#474b57" style="stroke: var(--color1, #474b57)" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="3.5556" d="M5.333 1.778h21.333c1.964 0 3.556 1.592 3.556 3.556v21.333c0 1.964-1.592 3.556-3.556 3.556h-21.333c-1.964 0-3.556-1.592-3.556-3.556v-21.333c0-1.964 1.592-3.556 3.556-3.556z"></path>
+<path fill="none" stroke="#fff" style="stroke: var(--color2, #fff)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.4889" d="M24 11.556l-10.389 10.667-4.722-4.848"></path>
+</symbol>
 </defs>
 </svg>

@@ -1,0 +1,334 @@
+
+
+/* Post-nav */
+.post__nav {
+  display: flex;
+  flex-direction: row;
+  gap: 13px;
+  padding: 20px 12px;
+  background-color: var(--color-neutral-w100);
+}
+
+.post__nav__home:hover {
+  transform: scale(1.05);
+}
+
+.post__nav__search {
+  color: var(--color-neutral-b900);
+}
+
+.post__nav__search:hover {
+  transform: scale(1.05);
+}
+
+/* Hero-product-section */
+
+.hero-product-section {
+  display: flex;
+}
+
+
+/* Left-bar */
+
+.left-bar {
+  flex-grow: 1;
+}
+
+.left-bar__categories {
+  padding: 24px 14px 32px 18px;
+}
+
+.left-bar__categories__heading {
+  margin-bottom: 16px;
+}
+
+.left-bar__categories__list {
+  padding: 0;
+}
+
+.left-bar__categories__list__item input[type="checkbox"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.left-bar__categories__list__item__label {
+  display: flex;
+  align-items: center;
+}
+
+.left-bar__categories__list__item__label:hover{
+  cursor: pointer;
+}
+
+.left-bar__categories__input:checked + label::before {
+  background-image: url(/images/svg/select-box.svg);
+  border: 2px solid var(--color-neutral-w900);
+}
+
+.left-bar__categories__list__item__label::before {
+  content: "";
+  display: inline-block;
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+  border: 2px solid var(--color-neutral-b100);
+  border-radius: 3px;
+  background-color: var(--color-neutral-w900);
+}
+
+.left-bar__categories__list__item {
+  padding: 12px 0 12px 4px;
+}
+
+.left-bar__categories__list__item::after {
+  content: " ";
+  display: block;
+  width: 200px;
+  height: 0px;
+  box-shadow: 0px 12px 0px 0.5px var(--color-neutral-w200);
+}
+
+.left-bar__categories__list__item__label {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--color-neutral-b600);
+}
+
+
+/* left-bar__color */
+.left-bar__color {
+  padding-left: 18px;
+  margin-bottom: 40px;
+}
+
+.left-bar__color__heading {
+  margin-bottom: 12px;
+}
+
+.left-bar__color__checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.colors__container {
+  display: flex;
+  gap: 18px;
+}
+
+.left-bar__color__semantic-blue::before {
+  background-color: var(--color-semantic-blue-b400);
+}
+
+.left-bar__color__semantic-yellow::before {
+  background-color: var(--color-semantic-yellow-y400);
+}
+
+.left-bar__color__primary-blue:before {
+  background-color: var(--color-primary-b900);
+}
+
+.left-bar__color__semantic-green::before {
+  background-color: var(--color-semantic-green-g400);
+}
+
+.left-bar__color__label::before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border-radius: 25px;
+}
+
+.left-bar__color__checkbox:checked + .left-bar__color__label::before {
+  box-shadow: 0 0 0 3px var(--color-neutral-w900), 0 0 0 5px var(--color-neutral-b900);
+}
+
+.left-bar__color__label:hover {
+  cursor: pointer;
+}
+
+
+/* left-bar__size */
+.left-bar__size {
+  padding: 12px 0 0 18px;
+}
+
+.left-bar__size__container {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  overflow: hidden;
+  max-width: 200px;
+  margin-bottom: 40px;
+}
+
+.left-bar__size__heading {
+  margin-bottom: 12px;
+}
+
+.left-bar__size__checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.left-bar__size__checkbox__label {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-neutral-b500);
+  border: 1px solid var(--color-neutral-b100);
+  border-radius: 4px;
+}
+
+.left-bar__size__checkbox__label:hover {
+  cursor: pointer;
+  color: var(--color-neutral-b900);
+  border-color: var(--color-neutral-b900);
+}
+.left-bar__size__checkbox:checked + .left-bar__size__checkbox__label {
+  color: var(--color-neutral-b900);
+  border-color: var(--color-neutral-b900);
+}
+
+/* left-bar_price_range */
+.left-bar__price {
+  max-height: 104px;
+  max-width: 216px;
+}
+
+/* Контейнер тепер має висоту ручки, щоб зафіксувати елементи по центру */
+.price-slider-container {
+  position: relative;
+  width: 100%;
+  height: 16px;
+}
+
+/* Сіра основа треку — її ми центруємо вертикально всередині контейнера */
+.slider-track {
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background-color: var(--color-neutral-b100);
+  border-radius: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+/* Активна лінія прогресу — так само по центру */
+.slider-progress {
+  position: absolute;
+  height: 6px;
+  background-color: var(--color-neutral-b300);
+  border-radius: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+/* Інпути розтягуємо на всю висоту контейнера і ставимо строго по центру */
+.price-slider-container input[type="range"] {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: none;
+  pointer-events: none;
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+  padding: 0;
+  /* Прибираємо внутрішні дефолтні паддінги браузера */
+}
+
+/* Стилізація ручок для Chrome, Safari, Edge */
+.price-slider-container input[type="range"]::-webkit-slider-thumb {
+  position: relative;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: var(--color-neutral-b900);
+  cursor: pointer;
+  pointer-events: auto;
+  border: none;
+  box-shadow: 0 0 0 2px var(--color-neutral-w900);
+  z-index: 3;
+  /* Додаємо тонку білу рамку навколо кружка, щоб він виділявся на лінії */
+}
+
+/* Стилізація ручок для Firefox */
+.price-slider-container input[type="range"]::-moz-range-thumb {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--color-neutral-b900);
+  cursor: pointer;
+  pointer-events: auto;
+  border: none;
+  box-shadow: 0 0 0 2px var(--color-neutral-w900);
+  z-index: 3;
+}
+
+/* Чорний підкажчик ціни */
+.price-tooltip {
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  /* Центруємо його посередині відносно прогресу */
+  transform: translateX(-50%);
+  background-color: var(--color-neutral-b900);
+  color: var(--color-neutral-w900);
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: 'Inter', sans-serif;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 4;
+}
+
+.price-tooltip::before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #0b131f transparent;
+}
+
+
+
+.products-section__container {
+  max-width: 824px;
+}

@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E/Categories</title>
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="/css/categories.css">
+</head>
+<body>
+  <header>
+    <aside class="aside-banner">
+      <div class="container">
+        <p class="banner">Get 25% OFF on your first order. Order Now</p>
+      </div>
+    </aside>
+    <div class="container">
+      <nav class="header__container">
+        <a href="./index.html"><img src="./images/svg/logo.svg" alt="logo"></a>
+        <ul class="header__container__list">
+          <li class="header__container__list__i"><a class="header__container__list__item" href="./index.html">Home</a></li>
+          <li class="header__container__list__i header__container__list__categories"><a
+              class="header__container__list__item dropdown-menu__toggle" href="/">
+              Categories
+              <svg class="droptown__toggle__img" height="24" width="24">
+                <use href="/images/svg/icons.svg#icon-Chevron-Down"></use>
+              </svg></a>
+            <div class="dropdown-menu__container">
+              <ul class="dropdown-menu">
+                <li class="dropdown-menu__item"><a href="#">Perfume</a></li>
+                <li class="dropdown-menu__item"><a href="#">Trousers</a></li>
+                <li class="dropdown-menu__item"><a href="#">Shoe</a></li>
+                <li class="dropdown-menu__item"><a href="#">Handbag</a></li>
+                <li class="dropdown-menu__item"><a href="#">Hat</a></li>
+                <li class="dropdown-menu__item"><a href="#">Thermos</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="header__container__list__i"><a class="header__container__list__item" href="#">About</a></li>
+          <li class="header__container__list__i"><a class="header__container__list__item" href="#">Contact</a></li>
+        </ul>
+        <div class="user-search">
+          <input class="user__searcher" type="text" name="" id="user__searcher" placeholder=" ">
+          <label class="user__searcher__label" for="user__searcher">Search products</label>
+          <img class="search-image" src="./images/svg/search.svg" alt="searcher">
+        </div>
+        <div class="header-section__buttons">
+          <button class="header-section__button" type="button">
+            <svg height="18" width="18">
+              <use href="/images/svg/icons.svg#icon-cart_button"></use>
+            </svg>
+          </button>
+          <button class="header-section__button" type="button">
+            <svg height="18" width="18">
+              <use href="/images/svg/icons.svg#icon-User_button"></use>
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      <div class="post__nav">
+        <a class="post__nav__home" href="#">Ecommerce</a>
+        <span>></span>
+        <a class="post__nav__search" href="#">Search</a>
+      </div>
+    </div>
+    <div class="container">
+      <div class="hero-product-section">
+        <aside class="left-bar">
+          <div class="left-bar__categories">
+            <h6 class="left-bar__categories__heading">Categories</h6>
+            <ul class="left-bar__categories__list">
+              <li class="left-bar__categories__list__item"><input class="left-bar__categories__input" type="checkbox" id="perfume">
+                <label class="left-bar__categories__list__item__label" for="perfume">Perfume</label></li>
+              <li class="left-bar__categories__list__item"><input class="left-bar__categories__input" type="checkbox" id="trousers">
+                <label class="left-bar__categories__list__item__label" for="trousers">Trousers</label></li>
+              <li class="left-bar__categories__list__item"><input class="left-bar__categories__input" type="checkbox" id="shoe">
+                <label class="left-bar__categories__list__item__label" for="shoe">Shoe</label></li>
+              <li class="left-bar__categories__list__item"><input class="left-bar__categories__input" type="checkbox" id="handbang">
+                <label class="left-bar__categories__list__item__label" for="handbang">Handbag</label></li>
+              <li class="left-bar__categories__list__item"><input class="left-bar__categories__input" type="checkbox" id="hat">
+                <label class="left-bar__categories__list__item__label" for="hat">Hat</label></li>
+              <li class="left-bar__categories__list__item"><input class="left-bar__categories__input" type="checkbox" id="thermos">
+                <label class="left-bar__categories__list__item__label" for="thermos">Thermos</label></li>
+            </ul>
+          </div>
+          <div class="left-bar__color">
+            <h6 class="left-bar__color__heading">Color</h6>
+            <div class="colors__container">
+              <input class="left-bar__color__checkbox" type="checkbox" id="left-bar__color__semantic-blue">
+              <label class="left-bar__color__label left-bar__color__semantic-blue" for="left-bar__color__semantic-blue"></label>
+              <input class="left-bar__color__checkbox" type="checkbox" id="left-bar__color__semantic-yellow">
+              <label class="left-bar__color__label left-bar__color__semantic-yellow" for="left-bar__color__semantic-yellow"></label>
+              <input class="left-bar__color__checkbox left-bar__color__semantic-green" type="checkbox" id="left-bar__color__semantic-green">
+              <label class="left-bar__color__label left-bar__color__semantic-green" for="left-bar__color__semantic-green"></label>
+              <input class="left-bar__color__checkbox" type="checkbox" id="left-bar__color__primary-blue">
+              <label class="left-bar__color__label left-bar__color__primary-blue" for="left-bar__color__primary-blue"></label>
+            </div>
+          </div>
+          <div class="left-bar__size">
+            <h6 class="left-bar__size__heading">Size</h6>
+            <div class="left-bar__size__container">
+              <input class="left-bar__size__checkbox" type="checkbox" id="size_s">
+              <label class="left-bar__size__checkbox__label" for="size_s">S</label>
+              <input class="left-bar__size__checkbox" type="checkbox" id="size_m">
+              <label class="left-bar__size__checkbox__label" for="size_m">M</label>
+              <input class="left-bar__size__checkbox" type="checkbox" id="size_l">
+              <label class="left-bar__size__checkbox__label" for="size_l">L</label>
+              <input class="left-bar__size__checkbox" type="checkbox" id="size_xl">
+              <label class="left-bar__size__checkbox__label" for="size_xl">XL</label>
+              <input class="left-bar__size__checkbox" type="checkbox" id="size_xxl">
+              <label class="left-bar__size__checkbox__label" for="size_xxl">XXL</label>
+            </div>
+          </div>
+          <div class="left-bar__price">
+            <h6 class="left-bar__price__heading">Price</h6>
+            <div class="price-slider-container">
+              <div class="slider-track"></div>
+              <div class="slider-progress" id="slider-progress"></div>
+              <input type="range" min="0" max="1000" value="0" id="slider-min">
+              <input type="range" min="0" max="1000" value="1000" id="slider-max">
+            </div>
+            <div class="price-tooltip" id="price-tooltip">$ 0.00 - $ 1000.00</div>
+          </div>
+        </aside>
+        <section class="products-section">
+            <div class="products-section__container">
+              <p>SHOP NOW</p>
+              <h3>Best Selling</h3>
+              <ul class="section__list">
+                <li class="section__list__li">
+                  <article class="section__list__item">
+                    <a href="#">
+                      <img class="section__list__image" src="./images/black-t-shirt.png" alt="t-shirt black">
+                      <div>
+                        <p class="section__list__text">Classic Monohrome Tees</p>
+                        <div class="section__list__container">
+                          <span class="section__list__label">IN STOCK</span>
+                          <p>$35.00</p>
+                        </div>
+                      </div>
+                    </a>
+                  </article>
+                </li>
+                <li class="section__list__li">
+                  <article class="section__list__item">
+                    <a href="#">
+                      <img class="section__list__image" src="./images/brown-t-shirt.png" alt="t-shirt brown">
+                      <div>
+                        <p class="section__list__text">Monohromatic Wardrobe</p>
+                        <div class="section__list__container">
+                          <span class="section__list__label">IN STOCK</span>
+                          <p>$27.00</p>
+                        </div>
+                      </div>
+                    </a>
+                  </article>
+                </li>
+                <li class="section__list__li">
+                  <article class="section__list__item">
+                    <a href="#">
+                      <img class="section__list__image" src="./images/white-t-shirt.png" alt="t-shirt white">
+                      <div>
+                        <p class="section__list__text">Essential Neutrals</p>
+                        <div class="section__list__container">
+                          <span class="section__list__label">IN STOCK</span>
+                          <p>$22.00</p>
+                        </div>
+                      </div>
+                    </a>
+                  </article>
+                </li>
+                <li class="section__list__li">
+                  <article class="section__list__item">
+                    <a href="#">
+                      <img class="section__list__image" src="./images/utraanet-black-t-shirt.png" alt="t-shirt black">
+                      <div>
+                        <p class="section__list__text">UTRAANET Black</p>
+                        <div class="section__list__container">
+                          <span class="section__list__label">IN STOCK</span>
+                          <p>$43.00</p>
+                        </div>
+                      </div>
+                    </a>
+                  </article>
+                </li>
+                <li class="section__list__li">
+                  <article class="section__list__item">
+                    <a href="#">
+                      <img class="section__list__image" src="./images/black-t-shirt.png" alt="t-shirt black">
+                      <div>
+                        <p class="section__list__text">Classic Monohrome Tees</p>
+                        <div class="section__list__container">
+                          <span class="section__list__label">IN STOCK</span>
+                          <p>$35.00</p>
+                        </div>
+                      </div>
+                    </a>
+                  </article>
+                </li>
+                <li class="section__list__li">
+                  <article class="section__list__item">
+                    <a href="#">
+                      <img class="section__list__image" src="./images/brown-t-shirt.png" alt="t-shirt brown">
+                      <div>
+                        <p class="section__list__text">Monohromatic Wardrobe</p>
+                        <div class="section__list__container">
+                          <span class="section__list__label">IN STOCK</span>
+                          <p>$27.00</p>
+                        </div>
+                      </div>
+                    </a>
+                  </article>
+                </li>
+                <li class="section__list__li">
+                  <article class="section__list__item">
+                    <a href="#">
+                      <img class="section__list__image" src="./images/white-t-shirt.png" alt="t-shirt white">
+                      <div>
+                        <p class="section__list__text">Essential Neutrals</p>
+                        <div class="section__list__container">
+                          <span class="section__list__label">IN STOCK</span>
+                          <p>$22.00</p>
+                        </div>
+                      </div>
+                    </a>
+                  </article>
+                </li>
+                <li class="section__list__li">
+                  <article class="section__list__item">
+                    <a href="#">
+                      <img class="section__list__image" src="./images/utraanet-black-t-shirt.png" alt="t-shirt black">
+                      <div>
+                        <p class="section__list__text">UTRAANET Black</p>
+                        <div class="section__list__container">
+                          <span class="section__list__label">IN STOCK</span>
+                          <p>$43.00</p>
+                        </div>
+                      </div>
+                    </a>
+                  </article>
+                </li>
+                <li class="section__list__li">
+                  <article class="section__list__item">
+                    <a href="#">
+                      <img class="section__list__image" src="./images/black-t-shirt.png" alt="t-shirt black">
+                      <div>
+                        <p class="section__list__text">Classic Monohrome Tees</p>
+                        <div class="section__list__container">
+                          <span class="section__list__label">IN STOCK</span>
+                          <p>$35.00</p>
+                        </div>
+                      </div>
+                    </a>
+                  </article>
+                </li>
+                <li class="section__list__li">
+                  <article class="section__list__item">
+                    <a href="#">
+                      <img class="section__list__image" src="./images/brown-t-shirt.png" alt="t-shirt brown">
+                      <div>
+                        <p class="section__list__text">Monohromatic Wardrobe</p>
+                        <div class="section__list__container">
+                          <span class="section__list__label">IN STOCK</span>
+                          <p>$27.00</p>
+                        </div>
+                      </div>
+                    </a>
+                  </article>
+                </li>
+                <li class="section__list__li">
+                  <article class="section__list__item">
+                    <a href="#">
+                      <img class="section__list__image" src="./images/white-t-shirt.png" alt="t-shirt white">
+                      <div>
+                        <p class="section__list__text">Essential Neutrals</p>
+                        <div class="section__list__container">
+                          <span class="section__list__label">IN STOCK</span>
+                          <p>$22.00</p>
+                        </div>
+                      </div>
+                    </a>
+                  </article>
+                </li>
+                <li class="section__list__li">
+                  <article class="section__list__item">
+                    <a href="#">
+                      <img class="section__list__image" src="./images/utraanet-black-t-shirt.png" alt="t-shirt black">
+                      <div>
+                        <p class="section__list__text">UTRAANET Black</p>
+                        <div class="section__list__container">
+                          <span class="section__list__label">IN STOCK</span>
+                          <p>$43.00</p>
+                        </div>
+                      </div>
+                    </a>
+                  </article>
+                </li>
+              </ul>
+            </div>
+      </div>
+      </section>
+    </div>
+    <section class="pre-footer-section">
+      <div class="container">
+        <div class="pre-footer-section__container">
+          <div class="pre-footer-section__container__text">
+            <h3>Join Our Newsletter</h3>
+            <p>We love to surprise our subscribers with occasional gifts.</p>
+          </div>
+          <div class="user-email">
+            <input class="user-email__input" type="text" name="" id="user-email" placeholder=" ">
+            <label class="user-email__input__label" for="user-email">Your email adress</label>
+            <button class="button subscribe-button" type="button">Subscribe</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container">
+      <div class="footer__container">
+        <div class="footer__container__logos">
+          <a href="/">
+            <img class="footer__container__logo" src="./images/svg/footer-logo.svg" alt="logo">
+          </a>
+          <p class="footer__container__logos__text">DevCut is a YouTube channel for practical project-based learning.
+          </p>
+          <div class="footer__container__logos__socials">
+            <a href="#" target="_blank">
+              <svg height="24" width="24">
+                <use href="/images/svg/icons.svg#icon-Github"></use>
+              </svg>
+            </a>
+            <a href="#" target="_blank">
+              <svg height="24" width="24">
+                <use href="/images/svg/icons.svg#icon-Instagram"></use>
+              </svg>
+            </a>
+            <a href="#" target="_blank">
+              <svg height="24" width="24">
+                <use href="/images/svg/icons.svg#icon-Youtube"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer__container__text">
+          <div>
+            <p class="footer__container__text__heading">SUPPORT</p>
+            <a href="#">
+              <p class="footer__container__text__paragraph">FAQ</p>
+            </a>
+            <a href="#">
+              <p class="footer__container__text__paragraph">Terms of use</p>
+            </a>
+            <a href="#">
+              <p>Privacy Policy</p>
+            </a>
+          </div>
+          <div>
+            <p class="footer__container__text__heading">COMPANY</p>
+            <a href="#">
+              <p class="footer__container__text__paragraph">About us</p>
+            </a>
+            <a href="#">
+              <p class="footer__container__text__paragraph">Contact us</p>
+            </a>
+            <a href="#">
+              <p>Careers</p>
+            </a>
+          </div>
+          <div>
+            <p class="footer__container__text__heading">SHOP</p>
+            <a href="#">
+              <p class="footer__container__text__paragraph">My Account</p>
+            </a>
+            <a href="#">
+              <p class="footer__container__text__paragraph">Checkout</p>
+            </a>
+            <a href="#">
+              <p>Cart</p>
+            </a>
+          </div>
+        </div>
+        <div>
+          <p class="footer__container__text__payments">ACCEPTED PAYMENTS</p>
+          <div class="footer__container__payments__logos">
+            <svg width="30" height="32">
+              <use href="/images/svg/icons.svg#icon-Mastercard"></use>
+            </svg>
+            <svg width="56" height="32">
+              <use href="/images/svg/icons.svg#icon-Amex"></use>
+            </svg>
+            <svg width="42" height="32">
+              <use href="/images/svg/icons.svg#icon-Visa"></use>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="footer__ended__container">
+        <p class="footer__ended__text">&copy 2023 DevCut. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+<script src="./script.js"></script>
+</body>
+</html>
