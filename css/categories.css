@@ -28,7 +28,26 @@
   display: flex;
 }
 
+.products-section {
+  flex-grow: 1;
+}
 
+.products-section__container {
+  margin-left: 20px;
+  max-width: 824px;
+}
+
+.section__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+  gap: 20px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
 /* Left-bar */
 
 .left-bar {
@@ -238,6 +257,7 @@
   position: relative;
   width: 100%;
   height: 16px;
+  margin-bottom: 20px;
 }
 
 /* Сіра основа треку — її ми центруємо вертикально всередині контейнера */
@@ -310,39 +330,44 @@
   z-index: 3;
 }
 
-/* Чорний підкажчик ціни */
-.price-tooltip {
-  position: relative;
-  display: inline-block;
-  left: 50%;
-  /* Центруємо його посередині відносно прогресу */
-  transform: translateX(-50%);
-  background-color: var(--color-neutral-b900);
-  color: var(--color-neutral-w900);
-  padding: 6px 14px;
-  border-radius: 6px;
-  font-size: 14px;
-  font-weight: 500;
-  font-family: 'Inter', sans-serif;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  z-index: 4;
+.price-tooltip__input {
+  display: flex;
+  max-width: 216px;
+  gap: 50px;
+  padding: 0 10px;
 }
 
-.price-tooltip::before {
-  content: "";
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  border-width: 5px;
-  border-style: solid;
-  border-color: transparent transparent var(--color-neutral-b900) transparent;
+/* 1. Хак для браузерів на рушії Chromium (Chrome, Safari, нові Edge, Opera) */
+.price__input::-webkit-outer-spin-button,
+.price__input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+  /* Прибирає дефолтні відступи стрілочок */
+}
+
+/* 2. Хак для браузера Firefox */
+.price__input {
+  -moz-appearance: textfield;
+}
+
+.price__input {
+  text-align: center;
+  width: 100%;
+  font-family: "Inter", sans-serif;
+  border: 1px solid var(--color-neutral-b500);
+  border-radius: 4px;
+}
+
+.price__input:focus {
+  border-color: var(--color-neutral-b900);
+  outline: none;
 }
 
 .button__container {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 216px;
 }
 
 .apply-filters-button {
@@ -438,9 +463,9 @@
 .dropdown-menu {
   display: flex;
   flex-direction: column;
-  max-width: 88px;
+  max-width: fit-content;
   gap: 3px;
-  padding: 5px 25px 5px 5px;
+  padding: 5px 5px 5px 5px;
   margin: 0;
 }
 
@@ -514,12 +539,4 @@
   flex-wrap: wrap;
   gap: 10px;
   margin-top: 8px;
-}
-
-
-
-
-.products-section__container {
-  margin-left: 20px;
-  max-width: 824px;
 }

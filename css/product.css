@@ -89,12 +89,36 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 42px;
+  gap: 32px;
   padding: 12px 16px;
   max-width: 164px;
   border: 1px solid var(--color-neutral-w100);
   border-radius: 4px;
   margin-bottom: 60px;
+}
+
+.product__quantity__input::-webkit-outer-spin-button,
+.product__quantity__input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Приховуємо стрілочки для Firefox */
+.product__quantity__input {
+  -moz-appearance: textfield;
+}
+
+/* Стилізуємо сам інпут, щоб він вписався замість колишнього span */
+.product__quantity__input {
+  width: 40px;
+  text-align: center;
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--color-neutral-b900);
+  outline: none;
+  /* Прибираємо рамку при фокусі */
 }
 
 .product__quantity__selected__button {
@@ -362,4 +386,23 @@ color: var(--color-neutral-b500); */
 
 .section__list__li {
   display: block;
+}
+
+.swiper {
+  width: 534px;
+  height: 574px;
+  margin: 0;
+}
+
+.product__photo-slider, 
+.swiper, 
+.swiper-initialized, 
+.swiper-horizontal, 
+.swiper-backface-hidden {
+  margin: 0 !important;
+}
+
+
+.product__photo-slider{
+--swiper-pagination-color: var(--color-neutral-b900);
 }

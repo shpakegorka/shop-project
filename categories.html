@@ -63,7 +63,7 @@
   <main>
     <div class="container">
       <div class="post__nav">
-        <a class="post__nav__home" href="#">Ecommerce</a>
+        <a class="post__nav__home" href="./index.html">Ecommerce</a>
         <span>></span>
         <a class="post__nav__search" href="#">Search</a>
       </div>
@@ -136,26 +136,21 @@
               <input type="range" min="0" max="1000" value="0" id="slider-min">
               <input type="range" min="0" max="1000" value="1000" id="slider-max">
             </div>
-            <div class="price-tooltip" id="price-tooltip">$ 0.00 - $ 1000.00</div>
+            <div class="price-tooltip__input">
+              <input class="price-tooltip__min price__input" type="number" min="0" max="1000" value="0" id="input-min">
+              <input class="price-tooltip__max price__input" type="number" min="0" max="1000" value="1000" id="input-max">
+            </div>
           </div>
-        <!-- <div class="button__container" id="applied-filters-container">
-        <button type="button" id="apply-filters-btn" class="apply-filters-button">Apply Filters</button>
-        </div> -->
         </aside>
         <section class="products-section">
           <div class="filters-container">
             <div class="filters-container__aside">
               <h6>Applied Filters:</h6>
-              <div class="buttons-container">
-                <button class="filters__button" type="button">Parfume
-                  <svg width="20" height="20">
-                    <use href="/images/svg/icons.svg#icon-close"></use>
-                  </svg>
-                </button>
+              <div class="buttons-container" id="applied-filters-container">
               </div>
             </div>
             <div class="filters-container__sorted">
-              <p>Showing <span>1</span> - <span>9</span> of <span>36</span> results.</p>
+              <p>Showing <span>1</span> - <span>9</span> of <span>9</span> results.</p>
               <div class="dropdown-menu__toggle dropdown-menu__sorted">
                 <div class="dropdown-menu__text">
                   <p сlass="dropdown-menu__paragraph">SORT BY</p>
@@ -164,11 +159,11 @@
                   </svg>
                 </div>
                 <div class="dropdown-menu__container">
-                  <ul class="dropdown-menu">
-                    <li class="dropdown-menu__item">Categorie</li>
-                    <li class="dropdown-menu__item">Color</li>
-                    <li class="dropdown-menu__item">Size</li>
-                    <li class="dropdown-menu__item">Price</li>
+                  <ul class="dropdown-menu" id="sort-options">
+                    <li class="dropdown-menu__item" data-sort="price-high">Price hight</li>
+                    <li class="dropdown-menu__item" data-sort="price-low">Price low</li>
+                    <li class="dropdown-menu__item" data-sort="size">Size (S-XXL)</li>
+                    <li class="dropdown-menu__item" data-sort="category">Categorie (A-Z)</li>
                   </ul>
                 </div>
               </div>
@@ -178,7 +173,7 @@
               <ul class="section__list">
                 <li class="section__list__li" data-category="Perfume" data-color="semantic-blue" data-size="size_m" data-price="35.00">
                   <article class="section__list__item">
-                    <a href="#">
+                    <a href="./products/product.html">
                       <img class="section__list__image" src="./images/blue-t-shirt.png" alt="t-shirt black">
                       <div>
                         <p class="section__list__text">Classic Monohrome Tees</p>
@@ -204,7 +199,7 @@
                     </a>
                   </article>
                 </li>
-                <li class="section__list__li" data-category="Perfume" data-color="primary-white" data-size="size_m" data-price="22.00">
+                <li class="section__list__li" data-category="Perfume" data-color="primary-white" data-size="size_s" data-price="22.00">
                   <article class="section__list__item">
                     <a href="#">
                       <img class="section__list__image" src="./images/white-t-shirt.png" alt="t-shirt white">
@@ -246,7 +241,7 @@
                     </a>
                   </article>
                 </li>
-                <li class="section__list__li" data-category="Handbag" data-color="primary-dark" data-size="size_l" data-price="57.00">
+                <li class="section__list__li" data-category="Handbag" data-color="primary-dark" data-size="size_xxl" data-price="57.00">
                   <article class="section__list__item">
                     <a href="#">
                       <img class="section__list__image" src="./images/khudi-black.png" alt="hudi blach">
