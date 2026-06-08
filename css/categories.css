@@ -10,10 +10,6 @@
   margin-bottom: 36px;
 }
 
-.post__nav__home:hover {
-  transform: scale(1.05);
-}
-
 .post__nav__search {
   color: var(--color-neutral-b900);
 }

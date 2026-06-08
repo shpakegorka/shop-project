@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E/Cart</title>
+  <link rel="stylesheet" href="./css/product.css">
+  <link rel="stylesheet" href="./css/categories.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/cart.css">
+</head>
+
+<body>
+  <header>
+    <aside class="aside-banner">
+      <div class="container">
+        <p class="banner">Get 25% OFF on your first order. Order Now</p>
+      </div>
+    </aside>
+    <div class="container">
+      <nav class="header__container">
+        <a href="/"><img src="./images/svg/logo.svg" alt="logo"></a>
+        <ul class="header__container__list">
+          <li class="header__container__list__i"><a class="header__container__list__item" href="#">Home</a></li>
+          <li class="header__container__list__i header__container__list__categories"><a
+              class="header__container__list__item dropdown-menu__toggle" href="./categories.html">
+              Categories
+              <svg class="droptown__toggle__img" height="24" width="24">
+                <use href="/images/svg/icons.svg#icon-Chevron-Down"></use>
+              </svg></a>
+            <div class="dropdown-menu__container">
+              <ul class="dropdown-menu">
+                <li class="dropdown-menu__item"><a href="#">Perfume</a></li>
+                <li class="dropdown-menu__item"><a href="#">Trousers</a></li>
+                <li class="dropdown-menu__item"><a href="#">Shoe</a></li>
+                <li class="dropdown-menu__item"><a href="#">Handbag</a></li>
+                <li class="dropdown-menu__item"><a href="#">Hat</a></li>
+                <li class="dropdown-menu__item"><a href="#">Thermos</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="header__container__list__i"><a class="header__container__list__item" href="./about.html">About</a>
+          </li>
+          <li class="header__container__list__i"><a class="header__container__list__item"
+              href="./contact.html">Contact</a></li>
+        </ul>
+        <div class="user-search">
+          <input class="user__searcher" type="text" name="" id="user__searcher" placeholder=" ">
+          <label class="user__searcher__label" for="user__searcher">Search products</label>
+          <img class="search-image" src="./images/svg/search.svg" alt="searcher">
+        </div>
+        <div class="header-section__buttons">
+          <button class="header-section__button" type="button">
+            <svg height="18" width="18">
+              <use href="/images/svg/icons.svg#icon-cart_button"></use>
+            </svg>
+          </button>
+          <button class="header-section__button" type="button">
+            <svg height="18" width="18">
+              <use href="/images/svg/icons.svg#icon-User_button"></use>
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="post__nav__section">
+      <div class="container">
+        <div class="post__nav__container">
+          <div class="post__nav">
+            <h3 class="post__nav__heading">Cart</h3>
+            <a class="post__nav__home" href="./index.html">Ecommerce</a>
+            <span>></span>
+            <a class="post__nav__search" href="#">Cart</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="hero-section">
+      <div class="container">
+        <div class="cart-container">
+          <div class="cart-list__container">
+            <h4 class="cart-list__container__heading">Your cart</h4>
+            <div class="cart-list__item">
+              <div class="cart-list__item__image__container">
+                <img height="100%" src="./images/t-shirt-black.png" alt="t-shit-black">
+              </div>
+              <div class="cart-list__item__text">
+                <h6 class="cart-list__item__text__heading">Raw Black T-Shirt Lineup</h6>
+                <p class="cart-list__item__text__paragraph">Color: <span class="cart-list__item__text__color"></span> – Size: <span>M</span></p>
+              </div>
+              <div class="visible__container">
+                <h6 class="cart-list__item__text__price">$75.00</h6>
+                <div class="cart-list__item__quantity"></div>
+                <div class="product__quantity__selected">
+                  <button class="product__quantity__selected__button button-minus" type="button"><svg height="20px" width="20px">
+                      <use href="../images/svg/icons.svg#icon-Minus"></use>
+                    </svg></button>
+                  <input class="product__quantity__input js-quantity-input" type="number" value="1" min="1" max="99">
+                  <button class="product__quantity__selected__button button-plus" type="button"><svg height="20px" width="20px">
+                      <use href="../images/svg/icons.svg#icon-Add"></use>
+                    </svg></button>
+                </div>
+                <button class="cart-list__button__close"><svg width="20" height="20">
+                    <use href="./images/svg/icons.svg#icon-close"></use>
+                  </svg></button>
+              </div>
+            </div>
+            <div class="cart-list__item">
+              <div class="cart-list__item__image__container">
+                <img height="100%" src="./images/white-t-shirt.png" alt="white-t-shirt">
+              </div>
+              <div class="cart-list__item__text">
+                <h6 class="cart-list__item__text__heading">Essential Neutrals</h6>
+                <p class="cart-list__item__text__paragraph">Color: <span class="cart-list__item__2__text__color"></span> – Size:
+                  <span>L</span></p>
+              </div>
+              <div class="visible__container">
+                <h6 class="cart-list__item__text__price">$75.00</h6>
+                <div class="cart-list__item__quantity"></div>
+                <div class="product__quantity__selected">
+                  <button class="product__quantity__selected__button button-minus" type="button"><svg height="20px" width="20px">
+                      <use href="../images/svg/icons.svg#icon-Minus"></use>
+                    </svg></button>
+                  <input class="product__quantity__input js-quantity-input" type="number" value="1" min="1" max="99">
+                  <button class="product__quantity__selected__button button-plus" type="button"><svg height="20px" width="20px">
+                      <use href="../images/svg/icons.svg#icon-Add"></use>
+                    </svg></button>
+                </div>
+                <button class="cart-list__button__close"><svg width="20" height="20">
+                    <use href="./images/svg/icons.svg#icon-close"></use>
+                  </svg></button>
+              </div>
+            </div>
+          </div>
+          <div class="sum-list__container">
+            <h6 class="sum-list__container__heading">Order Summary</h6>
+            <div class="sum-list__container__text">
+              <p class="sum-list__container__text__gray">Subtotal</p><span class="sum-list__container__text__black">$ 90.00</span>
+            </div>
+            <div class="sum-list__container__text">
+              <p class="sum-list__container__text__gray">Shipping</p><span class="sum-list__container__text__black">Free</span>
+            </div>
+            <div class="sum-list__container__text">
+              <p class="sum-list__container__text__gray">Tax</p><span class="sum-list__container__text__black">$ 3.00</span>
+            </div>
+            <div class="sum-list__container__text sum-list__container__text__last">
+              <p class="sum-list__container__text__black">Total</p> <span class="sum-list__container__text__black">$ 100.00</span>
+            </div>
+            <button class="sum-list__container__button" type="button">Checkout</button>
+            <a class="sum-list__container__link" href="#">Continue Shopping</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="pre-footer-section">
+      <div class="container">
+        <div class="pre-footer-section__container">
+          <div class="pre-footer-section__container__text">
+            <h3>Join Our Newsletter</h3>
+            <p>We love to surprise our subscribers with occasional gifts.</p>
+          </div>
+          <div class="user-email">
+            <input class="user-email__input" type="text" name="" id="user-email" placeholder=" ">
+            <label class="user-email__input__label" for="user-email">Your email adress</label>
+            <button class="button subscribe-button" type="button">Subscribe</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container">
+      <div class="footer__container">
+        <div class="footer__container__logos">
+          <a href="/">
+            <img class="footer__container__logo" src="./images/svg/footer-logo.svg" alt="logo">
+          </a>
+          <p class="footer__container__logos__text">DevCut is a YouTube channel for practical project-based learning.
+          </p>
+          <div class="footer__container__logos__socials">
+            <a href="#" target="_blank">
+              <svg height="24" width="24">
+                <use href="/images/svg/icons.svg#icon-Github"></use>
+              </svg>
+            </a>
+            <a href="#" target="_blank">
+              <svg height="24" width="24">
+                <use href="/images/svg/icons.svg#icon-Instagram"></use>
+              </svg>
+            </a>
+            <a href="#" target="_blank">
+              <svg height="24" width="24">
+                <use href="/images/svg/icons.svg#icon-Youtube"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer__container__text">
+          <div>
+            <p class="footer__container__text__heading">SUPPORT</p>
+            <a href="#">
+              <p class="footer__container__text__paragraph">FAQ</p>
+            </a>
+            <a href="#">
+              <p class="footer__container__text__paragraph">Terms of use</p>
+            </a>
+            <a href="#">
+              <p>Privacy Policy</p>
+            </a>
+          </div>
+          <div>
+            <p class="footer__container__text__heading">COMPANY</p>
+            <a href="./about.html">
+              <p class="footer__container__text__paragraph">About us</p>
+            </a>
+            <a href="#">
+              <p class="footer__container__text__paragraph">Contact us</p>
+            </a>
+            <a href="#">
+              <p>Careers</p>
+            </a>
+          </div>
+          <div>
+            <p class="footer__container__text__heading">SHOP</p>
+            <a href="#">
+              <p class="footer__container__text__paragraph">My Account</p>
+            </a>
+            <a href="#">
+              <p class="footer__container__text__paragraph">Checkout</p>
+            </a>
+            <a href="#">
+              <p>Cart</p>
+            </a>
+          </div>
+        </div>
+        <div>
+          <p class="footer__container__text__payments">ACCEPTED PAYMENTS</p>
+          <div class="footer__container__payments__logos">
+            <svg width="30" height="32">
+              <use href="/images/svg/icons.svg#icon-Mastercard"></use>
+            </svg>
+            <svg width="56" height="32">
+              <use href="/images/svg/icons.svg#icon-Amex"></use>
+            </svg>
+            <svg width="42" height="32">
+              <use href="/images/svg/icons.svg#icon-Visa"></use>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="footer__ended__container">
+        <p class="footer__ended__text">&copy 2023 DevCut. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="./script.js"></script>
+</body>
+</html>
