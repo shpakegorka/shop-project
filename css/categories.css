@@ -466,6 +466,7 @@
 }
 
 .dropdown-menu__item {
+  white-space: nowrap;
   font-family: 'Inter', sans-serif;
   font-size: 14px;
   font-weight: 400;
@@ -480,7 +481,7 @@
 .dropdown-menu__container {
   position: absolute;
   top: 100%;
-  left: 0px;
+  left: -10px;
   background-color: var(--color-neutral-b100);
   border-radius: 4px;
   opacity: 0;

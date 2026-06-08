@@ -59,11 +59,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const sizeB = b.getAttribute('data-size') || '';
 
         switch (sortType) {
-          case 'price-low':  return priceA - priceB;
+          case 'price-low': return priceA - priceB;
           case 'price-high': return priceB - priceA;
-          case 'category':   return catA.localeCompare(catB);
-          case 'size':       return (sizeWeight[sizeA] || 0) - (sizeWeight[sizeB] || 0);
-          default:           return 0;
+          case 'category': return catA.localeCompare(catB);
+          case 'size': return (sizeWeight[sizeA] || 0) - (sizeWeight[sizeB] || 0);
+          default: return 0;
         }
       });
 
@@ -170,9 +170,9 @@ document.addEventListener('DOMContentLoaded', () => {
         maxPrice = 0;
         inputMax.value = 0;
       }
-      if (maxPrice > 1000) { 
-        maxPrice = 1000;         
-        inputMax.value = 1000;   
+      if (maxPrice > 1000) {
+        maxPrice = 1000;
+        inputMax.value = 1000;
       }
 
       // Захист від перехрещення
@@ -266,40 +266,45 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ==========================================
-  // ВИНІС ОДНОГО ПРОДУКТУ: ЛОГІКА КІЛЬКОСТІ (QUANTITY)
+  // ЛОГІКА КІЛЬКОСТІ (QUANTITY) ДОДАВАННЯ Й ВІДНІМАННЯ ТОВАРУ
   // ==========================================
-  const btnMinus = document.querySelector('.button-minus');
-  const btnPlus = document.querySelector('.button-plus');
-  const quantityInput = document.querySelector('.js-quantity-input');
+  const quantityItems = document.querySelectorAll(".product__quantity__selected");
 
-  if (btnMinus && btnPlus && quantityInput) {
-    btnMinus.addEventListener('click', () => {
-      let currentValue = parseInt(quantityInput.value) || 1;
-      if (currentValue > 1) {
-        quantityInput.value = currentValue - 1;
-      }
-    });
+  if (quantityItems.length > 0) {
+    for (let item of quantityItems) {
+      const btnMinus = item.querySelector('.button-minus')
+      const quantityInput = item.querySelector('.js-quantity-input');
+      const btnPlus = item.querySelector('.button-plus')
+      btnMinus.addEventListener('click', () => {
+        let currentValue = parseInt(quantityInput.value) || 1;
+        if (currentValue > 1) {
+          quantityInput.value = currentValue - 1;
+        }
+      });
 
-    btnPlus.addEventListener('click', () => {
-      let currentValue = parseInt(quantityInput.value) || 1;
-      let maxLimit = parseInt(quantityInput.getAttribute('max')) || 99;
-      if (currentValue < maxLimit) {
-        quantityInput.value = currentValue + 1;
-      }
-    });
+      btnPlus.addEventListener('click', () => {
+        let currentValue = parseInt(quantityInput.value) || 1;
+        let maxLimit = parseInt(quantityInput.getAttribute('max')) || 99;
+        if (currentValue < maxLimit) {
+          quantityInput.value = currentValue + 1;
+        }
+      });
 
-    quantityInput.addEventListener('blur', () => {
-      let value = parseInt(quantityInput.value);
-      let minLimit = parseInt(quantityInput.getAttribute('min')) || 1;
-      let maxLimit = parseInt(quantityInput.getAttribute('max')) || 99;
+      quantityInput.addEventListener('blur', () => {
+        let value = parseInt(quantityInput.value);
+        let minLimit = parseInt(quantityInput.getAttribute('min')) || 1;
+        let maxLimit = parseInt(quantityInput.getAttribute('max')) || 99;
 
-      if (isNaN(value) || value < minLimit) {
-        quantityInput.value = minLimit;
-      } else if (value > maxLimit) {
-        quantityInput.value = maxLimit;
-      }
-    });
+        if (isNaN(value) || value < minLimit) {
+          quantityInput.value = minLimit;
+        } else if (value > maxLimit) {
+          quantityInput.value = maxLimit;
+        }
+      });
+      console.log(item);
+    }
   }
+
 
   // ==========================================
   // БЛОК Б. ЛОГІКА ТАБІВ (Для сторінки продукту)
@@ -340,4 +345,56 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // ==========================================
+  // РЕАЛІЗАЦІЯ МОЖЛИВОСТІ ПОШУКУ ТВОАРІВ
+  // ==========================================
+
+  if (document.querySelector(".user-search")) {
+    const searchInput = document.querySelector('.user-search .user__searcher');
+    const resultsContainer = document.querySelector('.user-search__results')
+    const allProduct = [
+      { id: 0, name: "Classic Monohrome Tees", img: "./images/blue-t-shirt.png", price: "$35.00", alt: "t-shirt black" },
+      { id: 1, name: "Monohromatic Wardrobe", img: "./images/brown-t-shirt.png", price: "$27.00", alt: "t-shirt brown" },
+      { id: 2, name: "Essential Neutrals", img: "./images/white-t-shirt.png", price: "$22.00", alt: "t-shirt white" },
+      { id: 3, name: "UTRAANET Black", img: "./images/utraanet-black-t-shirt.png", price: "$43.00", alt: "t-shirt black" },
+      { id: 4, name: "Elegant Ebony Sweatshirts", img: "./images/sweater-black.png", price: "$35.00", alt: "sweater black" },
+      { id: 5, name: "Sleek and Cozy Black", img: "./images/khudi-black.png", price: "$57.00", alt: "khudi black" },
+      { id: 6, name: "Raw Black Tees", img: "./images/t-shirt-gray.png", price: "$19.00", alt: "t-shirt gray" },
+      { id: 7, name: "MOCKUP Black", img: "./images/t-shirt-black.png", price: "$30.00", alt: "t-shirt black" },
+      { id: 8, name: "Classic Monohrome Tees", img: "./images/athletic-shirt.png", price: "$35.00", alt: "t-shirt athletic" }
+    ];
+
+    searchInput.addEventListener("input", (e) => {
+      let text = e.target.value.trim().toLowerCase();
+      if (text.length === 0) {
+        resultsContainer.style.display = 'none';
+        resultsContainer.innerHTML = "";
+      } else {
+        let filteredAllProduct = allProduct.filter(product => product.name.toLowerCase().includes(text) || product.alt.toLowerCase().includes(text));
+        let limitedProduct = filteredAllProduct.slice(0, 4);
+        if (limitedProduct.length > 0) {
+          resultsContainer.innerHTML = "";
+          resultsContainer.style.display = 'flex';
+          limitedProduct.forEach(product => {
+            resultsContainer.innerHTML += `
+            <div class="user-search__result">
+              <div class="user-search__result__image"><img class="user-search__result__img" src="${product.img}" alt="${product.alt}"></div>
+                <div class="user-search__result__text">
+                  <div class="user-search__result__heading"><h6 class="user-search__result__text__heading">${product.name}</h6></div>
+                  <div class="user-search__result__price"><h6 class="user-search__result__text__price">${product.price}</h6></div>
+                </div>
+              </div>`;
+          });
+        } else {
+          resultsContainer.innerHTML = "";
+          resultsContainer.style.display = 'none';
+        };
+      };
+    })
+    searchInput.addEventListener('keydown', (e) => { 
+      if (e.key == "Enter") {
+        window.location.href = `/categories.html`
+      };
+     });
+  };
 }); // КІНЕЦЬ DOMContentLoaded

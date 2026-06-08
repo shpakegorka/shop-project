@@ -330,6 +330,53 @@ header {
   cursor: text;
 }
 
+.user-search__results {
+  position: absolute;
+  top: 50px;
+  padding: 5px;
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  height: calc(100%+5px);
+  width: 100%;
+  background-color: var(--color-neutral-b100);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.user-search__result {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  height: 50px;
+  background-color: var(--color-neutral-w100);
+}
+
+.user-search__result:hover {
+  cursor: pointer;
+  background-color: var(--color-neutral-b200);
+}
+
+.user-search__result__image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-search__result__img {
+  height: 50px;
+  margin-bottom: 0;
+}
+
+.user-search__result__text__heading {
+  margin-bottom: 0;
+}
+
+.user-search__result__text__price {
+  margin-bottom: 0;
+}
+
 .header-section__buttons {
   display: flex;
   gap: 32px;
