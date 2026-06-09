@@ -301,7 +301,6 @@ document.addEventListener('DOMContentLoaded', () => {
           quantityInput.value = maxLimit;
         }
       });
-      console.log(item);
     }
   }
 
@@ -346,7 +345,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ==========================================
-  // РЕАЛІЗАЦІЯ МОЖЛИВОСТІ ПОШУКУ ТВОАРІВ
+  // РЕАЛІЗАЦІЯ МОЖЛИВОСТІ ПОШУКУ ТОВАРІВ
   // ==========================================
 
   if (document.querySelector(".user-search")) {
@@ -391,10 +390,170 @@ document.addEventListener('DOMContentLoaded', () => {
         };
       };
     })
-    searchInput.addEventListener('keydown', (e) => { 
+    searchInput.addEventListener('keydown', (e) => {
       if (e.key == "Enter") {
         window.location.href = `/categories.html`
       };
-     });
+    });
+  };
+
+  // ==========================================
+  // РЕАЛІЗАЦІЯ ВІДГУКІВ
+  // ==========================================
+  let quantityFeedback = 3;
+  
+  function updateReviewsAverageRate() {
+    let quantityFeedbacks = document.querySelectorAll(".feedback").length;
+    document.querySelector('.aproduct-section__reviews__quantity').textContent = quantityFeedbacks;
+    let qyantityRates = document.querySelectorAll(".rate-active").length; 
+    document.querySelector('.aproduct-section__reviews__rate').textContent = (Number(qyantityRates) / Number(quantityFeedbacks)).toFixed(1);
+
+  }
+
+  function updateReviewsVisibility() {
+    if (document.querySelector(".feedback__container")) { 
+    updateReviewsAverageRate()
+    document.querySelectorAll(".feedback").forEach((item, index) => {
+      if (index < quantityFeedback) {
+        item.style.display = 'flex';
+      } else {
+        item.style.display = 'none';
+      }    
+    });
+  }
+  }
+  updateReviewsVisibility();
+
+  document.querySelector('#more-feedbacks-btn').addEventListener('click', () => {
+    quantityFeedback = 10;
+    document.querySelector('#more-feedbacks-btn').style.display = "none";
+    document.querySelector('#less-feedbacks-btn').style.display = "flex";
+    updateReviewsVisibility();
+  })
+
+  document.querySelector('#less-feedbacks-btn').addEventListener('click', () => {
+    quantityFeedback = 3;
+    document.querySelector('#less-feedbacks-btn').style.display = "none";
+    document.querySelector('#more-feedbacks-btn').style.display = "flex";
+    updateReviewsVisibility();
+  })
+
+
+  // Виставлення оцінки
+  if (document.querySelector("#review-button-add")) {
+    document.querySelector("#review-button-add").addEventListener('click', () => {
+      document.querySelector(".aproduct-section__reviews__button").style.display = 'none';
+      document.querySelector(".aproduct-section__reviews__add").style.display = 'block';
+    })
+
+    let selectedRating = 0;
+    let stars = document.querySelectorAll('.rate__star');
+    let starsContainer = document.querySelector('.rate__container__stars');
+    stars.forEach((rate) => {
+      rate.addEventListener('mouseenter', (e) => {
+        let rateNumber = Number(e.currentTarget.dataset.value);
+        stars.forEach((star) => {
+          if (Number(star.dataset.value) <= rateNumber) {
+            star.classList.add('rate-active');
+          } else (star.classList.remove('rate-active'));
+        })
+    })
+    })
+    starsContainer.addEventListener('mouseleave', (e) => {
+      stars.forEach((star) => {
+          if (Number(star.dataset.value) <= selectedRating) {
+            star.classList.add('rate-active');
+          } else (star.classList.remove('rate-active'));
+        })
+    });
+    stars.forEach((rate) => {
+      rate.addEventListener('click', (e) => {
+        let rateNumber = Number(e.currentTarget.dataset.value);
+        if (selectedRating == rateNumber) {
+          selectedRating = 0;
+        } else {
+          selectedRating = rateNumber;
+          stars.forEach((star) => {
+            if (Number(star.dataset.value) <= rateNumber) {
+              star.classList.add('rate-active');
+            } else {
+              star.classList.remove('rate-active')
+            };
+        })}
+    })
+    })
+
+    // Кнопка додавання відгуків
+    let buttonAdd = document.querySelector('#review-button-added');
+    buttonAdd.addEventListener('click', () => {
+      let userText = document.querySelector('#user-text').value.trim();
+      let userRate = selectedRating;
+      if (userText && userRate) {
+        let reviewContainer = document.querySelector('.aproduct-section__review__container');
+
+      // 2. Створюємо новий елемент div для нашого відгуку
+      let newReview = document.createElement('div');
+        newReview.classList.add('aproduct-section__review');
+        newReview.classList.add('feedback');
+
+      // 3. Наповнюємо цей div HTML-кодом
+        newReview.innerHTML = `
+          <img width="48" height="48" src="../images/Avatar.png" alt="">
+          <div class="aproduct-section__review__text">
+                  <h4 class="aproduct-section__review__text__heading">Yehor Shpak</h4>
+                  <p class="aproduct-section__review__text__paragraph"><span>NOW</span><span></span></p>
+                  <p>${userText}</p>
+                </div>
+                <div class="aproduct-section__review__rate">
+                  ${generateStarsHTML(userRate)}
+                </div>
+              </div>`;
+
+      // 4. Додаємо новий відгук на початок списку контейнера
+      reviewContainer.prepend(newReview);
+      } if (userText && !userRate) {
+        document.querySelector('.rate__container__stars').style.border = '1px solid var(--color-semantic-red-r800)';
+      } else if (!userText && userRate) {
+        document.querySelector('#user-text').style.borderColor = 'var(--color-semantic-red-r800)';
+        document.querySelector('#user-text').value = '';
+        document.querySelector('#user-text').placeholder = "*please, enter your feedback";
+      } else if (!userText && !userRate) {
+        document.querySelector('#user-text').style.borderColor = 'var(--color-semantic-red-r800)';
+        document.querySelector('#user-text').value = '';
+        document.querySelector('#user-text').placeholder = "*please, enter your feedback";
+        document.querySelector('.rate__container__stars').style.border = '1px solid var(--color-semantic-red-r800)';
+      } else {
+        document.querySelector('#user-text').style.borderColor = '';
+        document.querySelector('#user-text').value = '';
+        document.querySelector('#user-text').placeholder = "";
+        document.querySelector('.rate__container__stars').style.border = '';
+        document.querySelectorAll('.user__star').forEach((star) => {
+          star.classList.remove('rate-active');
+        })
+        }
+      
+
+
+      function generateStarsHTML(rating) {
+      let starsHTML = '';
+      for (let i = 1; i <= 5; i++) {
+        if (i <= rating) {
+          // Зафарбована зірочка (додаємо твій клас активності)
+          starsHTML += `<svg class="aproduct-section__review__rate__image rate-active" width="16" height="16">
+                    <use href="../images/svg/icons.svg#icon-Empty-Star"></use>
+                  </svg>`; 
+        } else {
+          // Порожня зірочка
+          starsHTML += `<svg class="aproduct-section__review__rate__image" width="16" height="16">
+                    <use href="../images/svg/icons.svg#icon-Empty-Star"></use>
+                  </svg>`;
+        }
+      }
+      return starsHTML;
+      }
+
+      updateReviewsVisibility();
+      updateReviewsAverageRate();
+    })
   };
 }); // КІНЕЦЬ DOMContentLoaded

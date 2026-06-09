@@ -171,8 +171,32 @@
           </div>
           <div class="aproduct-section__reviews">
             <h5 class="aproduct-section__reviews__heading">Reviews</h5>
-            <p class="aproduct-section__reviews__paragraph"><span class="aproduct-section__reviews__rate">4.2</span> – <span class="aproduct-section__reviews__quantity">54</span> Reviews</p>
-            <button class="aproduct-section__reviews__button" type="button">Write a review</button>
+            <p class="aproduct-section__reviews__paragraph"><span class="aproduct-section__reviews__rate">4.2</span> – <span class="aproduct-section__reviews__quantity">4</span> Reviews</p>
+            <button class="aproduct-section__reviews__button" type="button" id="review-button-add">Write a review</button>
+            <div class="aproduct-section__reviews__add">
+              <textarea class="aproduct-section__reviews__add__field" name="" id="user-text"></textarea>
+              <div class="rate__container">
+                <h5 class="rate__container__heading">Please choose your rate:</h5>
+                <div class="rate__container__stars">
+                  <svg class="aproduct-section__review__rate__image rate__star user__star" width="16" height="16" data-value="1">
+                    <use href="../images/svg/icons.svg#icon-Empty-Star"></use>
+                  </svg>
+                  <svg class="aproduct-section__review__rate__image rate__star user__star" width="16" height="16" data-value="2">
+                    <use href="../images/svg/icons.svg#icon-Empty-Star"></use>
+                  </svg>
+                  <svg class="aproduct-section__review__rate__image rate__star user__star" width="16" height="16" data-value="3">
+                    <use href="../images/svg/icons.svg#icon-Empty-Star"></use>
+                  </svg>
+                  <svg class="aproduct-section__review__rate__image rate__star user__star" width="16" height="16" data-value="4">
+                    <use href="../images/svg/icons.svg#icon-Empty-Star"></use>
+                  </svg>
+                  <svg class="aproduct-section__review__rate__image rate__star user__star" width="16" height="16" data-value="5">
+                    <use href="../images/svg/icons.svg#icon-Empty-Star"></use>
+                  </svg>
+                </div>
+              </div>
+              <button class="aproduct-section__reviews__button__add" type="submit" id="review-button-added">Add a review</button>
+            </div>
             <div class="dropdown-menu__text aproduct-section__reviews__droptown">
               <p сlass="dropdown-menu__paragraph">SORT BY</p>
               <svg class="droptown__toggle__img" height="24" width="24">
@@ -186,8 +210,8 @@
                 <li class="dropdown-menu__item">Relevation</li>
               </ul>
             </div>
-            <div class="aproduct-section__review__container">
-              <div class="aproduct-section__review">
+            <div class="aproduct-section__review__container feedback__container">
+              <div class="aproduct-section__review feedback">
                 <img width="48" height="48" src="../images/Avatar.png" alt="">
                 <div class="aproduct-section__review__text">
                   <h4 class="aproduct-section__review__text__heading">Emily Davis</h4>
@@ -195,24 +219,24 @@
                   <p>This company always goes above and beyond to satisfy their customers.</p>
                 </div>
                 <div class="aproduct-section__review__rate">
-                  <svg width="16" height="16">
-                    <use href="../images/svg/icons.svg#icon-fill_star"></use>
+                  <svg class="aproduct-section__review__rate__image rate-active" width="16" height="16">
+                    <use href="../images/svg/icons.svg#icon-Empty-Star"></use>
                   </svg>
-                  <svg width="16" height="16">
-                    <use href="../images/svg/icons.svg#icon-fill_star"></use>
+                  <svg class="aproduct-section__review__rate__image rate-active" width="16" height="16">
+                    <use href="../images/svg/icons.svg#icon-Empty-Star"></use>
                   </svg>
-                  <svg width="16" height="16">
-                    <use href="../images/svg/icons.svg#icon-fill_star"></use>
+                  <svg class="aproduct-section__review__rate__image" width="16" height="16">
+                    <use href="../images/svg/icons.svg#icon-Empty-Star"></use>
                   </svg>
-                  <svg width="16" height="16">
-                    <use href="../images/svg/icons.svg#icon-fill_star"></use>
+                  <svg class="aproduct-section__review__rate__image" width="16" height="16">
+                    <use href="../images/svg/icons.svg#icon-Empty-Star"></use>
                   </svg>
                   <svg class="aproduct-section__review__rate__image" width="16" height="16">
                     <use href="../images/svg/icons.svg#icon-Empty-Star"></use>
                   </svg>
                 </div>
               </div>
-              <div class="aproduct-section__review">
+              <div class="aproduct-section__review feedback">
                 <img width="48" height="48" src="../images/Avatar.png" alt="">
                 <div class="aproduct-section__review__text">
                   <h4 class="aproduct-section__review__text__heading">Daniel Smith</h4>
@@ -220,24 +244,24 @@
                   <p>I can't believe how affordable and high-quality this item is!</p>
                 </div>
                 <div class="aproduct-section__review__rate">
-                  <svg width="16" height="16">
-                    <use href="../images/svg/icons.svg#icon-fill_star"></use>
+                  <svg class="aproduct-section__review__rate__image rate-active" width="16" height="16">
+                    <use href="../images/svg/icons.svg#icon-Empty-Star"></use>
                   </svg>
-                  <svg width="16" height="16">
-                    <use href="../images/svg/icons.svg#icon-fill_star"></use>
+                  <svg class="aproduct-section__review__rate__image rate-active" width="16" height="16">
+                    <use href="../images/svg/icons.svg#icon-Empty-Star"></use>
                   </svg>
-                  <svg width="16" height="16">
-                    <use href="../images/svg/icons.svg#icon-fill_star"></use>
+                  <svg class="aproduct-section__review__rate__image rate-active" width="16" height="16">
+                    <use href="../images/svg/icons.svg#icon-Empty-Star"></use>
                   </svg>
-                  <svg width="16" height="16">
-                    <use href="../images/svg/icons.svg#icon-fill_star"></use>
+                  <svg class="aproduct-section__review__rate__image rate-active" width="16" height="16">
+                    <use href="../images/svg/icons.svg#icon-Empty-Star"></use>
                   </svg>
                   <svg class="aproduct-section__review__rate__image" width="16" height="16">
                     <use href="../images/svg/icons.svg#icon-Empty-Star"></use>
                   </svg>
                 </div>
               </div>
-              <div class="aproduct-section__review">
+              <div class="aproduct-section__review feedback">
                 <img width="48" height="48" src="../images/Avatar.png" alt="">
                 <div class="aproduct-section__review__text">
                   <h4 class="aproduct-section__review__text__heading">Benjamin Clark</h4>
@@ -245,26 +269,52 @@
                   <p>These guys know their stuff, and it shows in their products.</p>
                 </div>
                 <div class="aproduct-section__review__rate">
-                  <svg width="16" height="16">
-                    <use href="../images/svg/icons.svg#icon-fill_star"></use>
+                  <svg class="aproduct-section__review__rate__image rate-active" width="16" height="16">
+                    <use href="../images/svg/icons.svg#icon-Empty-Star"></use>
                   </svg>
-                  <svg width="16" height="16">
-                    <use href="../images/svg/icons.svg#icon-fill_star"></use>
+                  <svg class="aproduct-section__review__rate__image rate-active" width="16" height="16">
+                    <use href="../images/svg/icons.svg#icon-Empty-Star"></use>
                   </svg>
-                  <svg width="16" height="16">
-                    <use href="../images/svg/icons.svg#icon-fill_star"></use>
+                  <svg class="aproduct-section__review__rate__image rate-active" width="16" height="16">
+                    <use href="../images/svg/icons.svg#icon-Empty-Star"></use>
                   </svg>
-                  <svg width="16" height="16">
-                    <use href="../images/svg/icons.svg#icon-fill_star"></use>
+                  <svg class="aproduct-section__review__rate__image" width="16" height="16">
+                    <use href="../images/svg/icons.svg#icon-Empty-Star"></use>
                   </svg>
                   <svg class="aproduct-section__review__rate__image" width="16" height="16">
                     <use href="../images/svg/icons.svg#icon-Empty-Star"></use>
                   </svg>
                 </div>
               </div>
+              <div class="aproduct-section__review feedback">
+                <img width="48" height="48" src="../images/Avatar.png" alt="">
+                <div class="aproduct-section__review__text">
+                  <h4 class="aproduct-section__review__text__heading">Alan Dunker</h4>
+                  <p class="aproduct-section__review__text__paragraph"><span>12</span><span>JANUARY</span></p>
+                  <p>It`s very cool product.</p>
+                </div>
+                <div class="aproduct-section__review__rate">
+                  <svg class="aproduct-section__review__rate__image rate-active" width="16" height="16">
+                    <use href="../images/svg/icons.svg#icon-Empty-Star"></use>
+                  </svg>
+                  <svg class="aproduct-section__review__rate__image rate-active" width="16" height="16">
+                    <use href="../images/svg/icons.svg#icon-Empty-Star"></use>
+                  </svg>
+                  <svg class="aproduct-section__review__rate__image rate-active" width="16" height="16">
+                    <use href="../images/svg/icons.svg#icon-Empty-Star"></use>
+                  </svg>
+                  <svg class="aproduct-section__review__rate__image rate-active" width="16" height="16">
+                    <use href="../images/svg/icons.svg#icon-Empty-Star"></use>
+                  </svg>
+                  <svg class="aproduct-section__review__rate__image rate-active" width="16" height="16">
+                    <use href="../images/svg/icons.svg#icon-Empty-Star"></use>
+                  </svg>
+                </div>
+              </div>
             </div>
             <div class="aproduct-section__review__button__container">
-              <button class="aproduct-section__review__button" type="button">Load more reviews</button>
+              <button class="aproduct-section__review__button" type="button" id="more-feedbacks-btn">Load more reviews</button>
+              <button class="aproduct-section__hide__button" type="button" id="less-feedbacks-btn">Hide reviews</button>
             </div>
           </div>
         </div>
