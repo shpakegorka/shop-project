@@ -1,0 +1,40 @@
+// scss/pages/_contact.scss
+
+.page-contact {
+
+  /* Секція з адресою та картою (Address-section) */
+  .adress-section__container {
+    margin-bottom: 88px;
+    display: flex;
+    justify-content: flex-end;
+
+    &__text {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      &__heading {
+        margin-bottom: 8px;
+      }
+
+      &__url {
+        display: inline-block;
+        font-family: "Inter", sans-serif;
+        font-size: 18px;
+        color: var(--color-primary-b400);
+        margin-bottom: 10px;
+
+        &:hover {
+          color: var(--color-primary-b700);
+        }
+      }
+    }
+  }
+
+  /* Стилізація інтерактивної карти або іфрейму */
+  .map {
+    border: 1px dotted var(--color-neutral-b700);
+    border-radius: 4px;
+  }
+}

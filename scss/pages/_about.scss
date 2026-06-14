@@ -1,0 +1,44 @@
+// scss/pages/_about.scss
+
+.page-about {
+
+  // Цей код змінить Hero-section ТІЛЬКИ на сторінці About Us
+  .hero-section {
+    .text {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end; // Вирівнюємо текст по правому краю
+    }
+
+    .images {
+      &::before {
+        left: 0; // Зсуваємо еліпс ліворуч
+      }
+
+      &::after {
+        left: 295px; // Зсуваємо зірочку ліворуч
+      }
+    }
+
+    .hero-section__image {
+      left: 0px; // Саму картинку дівчини/хлопця ставимо ліворуч
+    }
+  }
+
+  /* Опис компанії (Describe-section) */
+  .description-section__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 152px;
+  }
+
+  .description-section__url {
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--color-primary-b900);
+    text-align: center;
+  }
+}

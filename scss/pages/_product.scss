@@ -1,0 +1,459 @@
+// scss/pages/_product.scss
+
+.page-product {
+
+  /* Головна секція продукту */
+  .product-section__container {
+    display: flex;
+    gap: 120px;
+    margin-bottom: 176px;
+  }
+
+  /* Фото-слайдер (Swiper) */
+  .product__photo-slider__image {
+    height: 574px;
+    width: 534px;
+  }
+
+  .swiper {
+    width: 534px;
+    height: 574px;
+    margin: 0;
+  }
+
+  .product__photo-slider,
+  .swiper,
+  .swiper-initialized,
+  .swiper-horizontal,
+  .swiper-backface-hidden {
+    margin: 0 !important;
+  }
+
+  .product__photo-slider {
+    --swiper-pagination-color: var(--color-neutral-b900);
+  }
+
+  /* Опис та заголовки товару */
+  .product__description {
+    &__heading {
+      margin-bottom: 12px;
+
+      &__text {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: fit-content;
+        gap: 5px;
+        background-color: var(--color-neutral-w100);
+        border-radius: 25px;
+        padding: 7px 20px;
+        color: var(--color-neutral-b500);
+      }
+    }
+
+    &__header {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      margin-bottom: 24px;
+    }
+  }
+
+  .star__image {
+    padding: 4px;
+  }
+
+  /* Автономні стилі для блоків кольорів, розмірів та сортування на сторінці товару */
+  .left-bar__color__heading,
+  .left-bar__size__heading,
+  .product__quantity__heading {
+    text-transform: uppercase;
+    color: var(--color-neutral-b500);
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+
+  .colors__container {
+    margin-bottom: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+  }
+
+  .left-bar__size__container {
+    max-width: fit-content;
+    margin-bottom: 32px;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  /* Селектор кількості товару (Блок з інпутом) */
+  .product__quantity {
+    &__selected {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 32px;
+      padding: 12px 16px;
+      max-width: 164px;
+      border: 1px solid var(--color-neutral-w100);
+      border-radius: 4px;
+      margin-bottom: 60px;
+
+      &__button {
+        background-color: transparent;
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 400;
+        font-size: large;
+        padding: 0;
+
+        &:hover {
+          cursor: pointer;
+          transform: scale(1.1);
+        }
+      }
+    }
+
+    &__input {
+      width: 40px;
+      text-align: center;
+      border: none;
+      background: transparent;
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--color-neutral-b900);
+      outline: none;
+      -moz-appearance: textfield;
+
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+    }
+  }
+
+  /* Кнопки дій (Купити / Лайк) */
+  .product__buttons {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  .product__button__add {
+    padding: 10px 104px;
+    background-color: var(--color-neutral-b900);
+    color: var(--color-neutral-w100);
+    border: none;
+    border-radius: 4px;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.01);
+    }
+  }
+
+  .product__button__like {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: transparent;
+    border: 1px solid var(--color-neutral-b100);
+    border-radius: 4px;
+
+    &:hover {
+      cursor: pointer;
+
+      .product__button__like__image {
+        color: var(--color-semantic-red-r700);
+        stroke: var(--color-semantic-red-r700);
+      }
+    }
+
+    &__image {
+      color: transparent;
+      stroke: var(--color-neutral-b500);
+    }
+  }
+
+  /* Секція табів: Деталі та Відгуки (Aproduct-section) */
+  .aproduct-section {
+    &__container {
+      display: flex;
+      gap: 32px;
+    }
+
+    &__buttons {
+      padding-top: 72px;
+    }
+
+    &__button__details,
+    &__button__reviews {
+      display: flex;
+      gap: 10px;
+      width: 247px;
+      padding: 9px 0 9px 24px;
+      justify-content: flex-start;
+      border: none;
+      margin-bottom: 16px;
+      background-color: transparent;
+      color: var(--color-neutral-b500);
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &.is-selected {
+        background-color: var(--color-neutral-w100);
+        color: var(--color-neutral-b900);
+      }
+    }
+
+    &__button__reviews__image {
+      fill: transparent;
+      stroke: var(--color-neutral-b900);
+    }
+
+    &__button__reviews:hover>&__button__reviews__image {
+      fill: var(--color-neutral-b900);
+    }
+
+    &__details,
+    &__reviews {
+      display: none;
+      margin-bottom: 120px;
+
+      &.is-active {
+        display: block;
+      }
+    }
+
+    &__reviews {
+      flex-grow: 1;
+      flex-shrink: 0;
+
+      &__heading {
+        margin-bottom: 16px;
+      }
+
+      &__rate {
+        font-size: 32px;
+        font-weight: 800;
+        color: var(--color-neutral-b900);
+        margin-right: 10px;
+      }
+
+      &__paragraph {
+        margin-bottom: 40px;
+      }
+    }
+
+    &__details__paragraph {
+      margin-bottom: 56px;
+    }
+
+    &__details__list {
+      list-style-type: disc;
+      color: var(--color-neutral-b500);
+      padding-left: 18px;
+      line-height: 1.6;
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      font-size: 14px;
+    }
+
+    &__review__container {
+      margin-bottom: 90px;
+    }
+
+    &__review {
+      display: flex;
+      gap: 24px;
+      padding: 38px 17px 27px 8px;
+
+      &__text {
+        flex-grow: 1;
+
+        &__heading {
+          font-weight: 500;
+          font-size: 14px;
+          margin-bottom: 6px;
+        }
+
+        &__paragraph {
+          display: flex;
+          gap: 6px;
+          margin-bottom: 16px;
+        }
+      }
+
+      &__rate {
+        user-select: none;
+        display: flex;
+        gap: 3px;
+
+        &__image {
+          fill: transparent;
+          stroke: var(--color-neutral-b500);
+          padding: 0;
+          overflow: visible;
+
+          use {
+            transform: scale(1.6);
+            transform-origin: center;
+          }
+        }
+      }
+
+      &__button__container {
+        display: flex;
+        justify-content: center;
+      }
+
+      &__button {
+        display: flex;
+        padding: 10px 24px;
+        background-color: transparent;
+        border: 1px solid var(--color-neutral-b500);
+        border-radius: 4px;
+
+        &:hover {
+          cursor: pointer;
+          background-color: var(--color-neutral-w100);
+        }
+      }
+    }
+
+    &__reviews__button {
+      display: block;
+      background-color: transparent;
+      padding: 10px 24px;
+      border: 1px solid var(--color-neutral-b900);
+      border-radius: 4px;
+      color: var(--color-neutral-b900);
+      margin-bottom: 40px;
+
+      &:hover {
+        cursor: pointer;
+        background-color: var(--color-neutral-w100);
+      }
+
+      &__add {
+        background-color: var(--color-neutral-b900);
+        color: var(--color-neutral-w900);
+        padding: 10px 24px;
+        border: 1px solid var(--color-neutral-b900);
+        border-radius: 4px;
+        margin-bottom: 40px;
+
+        &:hover {
+          cursor: pointer;
+          transform: scale(1.01);
+        }
+      }
+    }
+
+    &__hide__button {
+      display: none;
+      align-items: center;
+      background-color: transparent;
+      border: none;
+
+      &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+    }
+
+    &__reviews__add {
+      display: none;
+
+      &__field {
+        display: block;
+        flex-shrink: 0;
+        min-height: 100px;
+        resize: none;
+        padding: 10px;
+        width: 100%;
+        margin-bottom: 10px;
+        outline: none;
+        font-family: "Inter", sans-serif;
+        font-size: 14px;
+        border-color: var(--color-neutral-b100);
+
+        &:focus,
+        &:hover {
+          border-color: var(--color-neutral-b500);
+        }
+      }
+    }
+  }
+
+  /* Зоряний рейтинг для форми */
+  .rate__container {
+    &__heading {
+      margin-bottom: 15px;
+    }
+
+    &__stars {
+      margin-bottom: 15px;
+      user-select: none;
+      display: flex;
+      gap: 3px;
+      justify-content: center;
+      align-items: center;
+      width: fit-content;
+      padding: 3px;
+      border: none;
+
+      &:hover {
+        border: none;
+      }
+    }
+  }
+
+  .rate__star {
+    cursor: pointer;
+  }
+
+  .rate-active {
+    fill: var(--color-neutral-b500) !important;
+  }
+
+  .droptown__toggle__img__reverse {
+    transform: rotate(180deg);
+  }
+
+  /* Нижня випадайка сортування у табі відгуків */
+  .aproduct-section__reviews__droptown {
+    display: flex;
+    justify-content: flex-end;
+    box-shadow: 0px 1px 0px var(--color-neutral-w200);
+    margin-bottom: 24px;
+  }
+
+  /* Нижня секція перед футером */
+  .pre-footer-product-section__container__text {
+    padding: 16px 0 0 12px;
+    margin-bottom: 56px;
+
+    &__heading {
+      margin-bottom: 8px;
+    }
+
+    &__paragraph {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 5%;
+    }
+  }
+
+  .section__list__li {
+    display: block;
+  }
+}

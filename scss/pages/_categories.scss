@@ -1,0 +1,157 @@
+// scss/pages/_categories.scss
+
+.page-categories {
+
+  /* Головний контейнер каталогу (Фільтри + Товари) */
+  .hero-product-section {
+    display: flex;
+  }
+
+  /* Права колонка з продуктами */
+  .products-section {
+    flex-grow: 1;
+
+    &__container {
+      margin-left: 20px;
+      max-width: 824px;
+    }
+  }
+
+  /* Сітка товарів */
+  .section__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    gap: 20px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  /* Контейнер верхніх фільтрів (Applied filters та Сортування) */
+  .filters-container {
+    padding-left: 30px;
+    padding-top: 4px;
+
+    &__aside {
+      margin-bottom: 24px;
+      padding-bottom: 4px;
+    }
+
+    &__sorted {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  /* Плашки активних фільтрів (Applied filters buttons) */
+  .filters__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+    border: 1px solid var(--color-neutral-b100);
+    border-radius: 25px;
+    padding: 6px 14px;
+    gap: 6px;
+    color: var(--color-neutral-b900);
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+
+    svg {
+      color: var(--color-neutral-b400);
+      transition: color 0.2s ease;
+    }
+
+    &:hover {
+      border-color: var(--color-neutral-b900);
+      background-color: var(--color-neutral-w100);
+      color: var(--color-neutral-b500);
+
+      svg {
+        color: var(--color-neutral-b900);
+      }
+    }
+  }
+
+  .buttons-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 8px;
+  }
+
+  /* Випадаюче меню сортування за ціною / популярністю */
+  .dropdown-menu__sorted {
+    display: inline-flex;
+    position: relative;
+    cursor: pointer;
+
+    &:hover {
+      .dropdown-menu__container {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+
+      .droptown__toggle__img {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .dropdown-menu {
+    display: flex;
+    flex-direction: column;
+    max-width: fit-content;
+    gap: 3px;
+    padding: 5px 5px 5px 5px;
+    margin: 0;
+
+    &__text {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding-right: 8px;
+    }
+
+    &__item {
+      white-space: nowrap;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--color-neutral-b500);
+
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.05);
+      }
+    }
+
+    &__container {
+      position: absolute;
+      top: 100%;
+      left: -10px;
+      background-color: var(--color-neutral-b100);
+      border-radius: 4px;
+      opacity: 0;
+      visibility: visible;
+      transform: translateY(10px);
+      transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+      transition-duration: 0.5s;
+      z-index: 6;
+    }
+  }
+
+  .droptown__toggle__img {
+    transition-duration: 0.5s;
+  }
+}
