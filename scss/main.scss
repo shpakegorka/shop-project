@@ -1,0 +1,28 @@
+// scss/main.scss
+
+// 1. Abstract / Utils (Шрифти, змінні)
+@use 'utils/fonts';
+@use 'utils/variables';
+
+// 2. Base (Скидання стилів, базові теги)
+@use './base';
+
+// 3. Layouts (Повторювані блоки на сторінках)
+@use 'layouts/banner';
+@use 'layouts/header';
+@use 'layouts/post-nav';
+@use 'layouts/advantages';
+@use 'layouts/footer';
+
+// 4. Components (Маленькі перевикористовувані елементи)
+@use 'components/buttons';
+@use 'components/product-card';
+@use 'components/sidebar-filters';
+
+// 5. Pages (Унікальні стилі окремих сторінок)
+@use 'pages/home';
+@use 'pages/about';
+@use 'pages/cart';
+@use 'pages/categories';
+@use 'pages/contacts';
+@use 'pages/product';

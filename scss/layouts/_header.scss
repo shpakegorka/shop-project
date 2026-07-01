@@ -1,0 +1,233 @@
+@use '../utils/variables' as var;
+
+header {
+  position: relative;
+  z-index: 4;
+}
+
+.header__container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  @include var.desktop {
+      justify-content: space-between;;
+    }
+  
+  align-items: center;
+  flex-grow: 1;
+  padding: 20px 0;
+}
+
+.header__container__list {
+  display: none;
+  position: absolute;
+  bottom: -25%;
+  background-color: var(--color-neutral-w200);
+  width: 100vw;
+  justify-content: center;
+  padding: 0;
+  flex-direction: row;
+  gap: 15px;
+  @include var.tablet {
+    display: flex;
+    gap: 45px
+  }
+  @include var.desktop {
+    display: flex;
+    background-color: transparent;
+      position: static;
+      transform: none;
+      display: flex;
+      width: 337px;
+      gap: 32px;
+      justify-content: flex-start;
+    }
+}
+
+.is-active {
+  display: flex;
+}
+
+.header__container__list__item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.header__container__list__i:hover {
+  transform: scale(1.05);
+}
+
+.header__container__list__categories {
+  display: inline-flex;
+  position: relative;
+}
+
+.droptown__toggle__img:hover {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu__container {
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  background-color: var(--color-neutral-b100);
+  border-radius: 4px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+  transition-duration: 0.5s;
+}
+
+.header__container__list__categories:hover .dropdown-menu__container {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.droptown__toggle__img {
+  transition-duration: 0.5s;
+}
+
+.header__container__list__categories:hover .droptown__toggle__img {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  padding: 0 35px 0 5px;
+}
+
+.dropdown-menu__item:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.search-image {
+  height: 46px;
+  width: 48px;
+  padding: 11px 12px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.user-search {
+  position: relative;
+  flex-grow: 1;
+  margin: 0;
+  display: none;
+  @include var.mobile {
+    display: block;
+    margin: 0 10px;
+  }
+  @include var.desktop {
+      flex-grow: 0;
+      margin: 0;
+    }
+}
+
+.user__searcher {
+  width: 100%;
+  @include var.desktop{
+      width: 264px;
+    }
+  height: 45px;
+  border: 1px solid var(--color-neutral-b100);
+  border-radius: 6px;
+  padding: 10px 20px 10px 48px;
+  color: var(--color-neutral-b500);
+  font-family: 'Inter', sans-serif;
+}
+
+.user__searcher:focus {
+  border-color: var(--color-neutral-b300);
+  outline: none;
+}
+
+.user__searcher:focus+.user__searcher__label {
+  display: none;
+}
+
+.user__searcher:not(:placeholder-shown)+.user__searcher__label {
+  display: none;
+}
+
+.user__searcher__label {
+  position: absolute;
+  left: 48px;
+  top: 10px;
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+}
+
+.user__searcher__label:hover {
+  cursor: text;
+}
+
+.user-search__results {
+  position: absolute;
+  top: 50px;
+  padding: 5px;
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+  background-color: var(--color-neutral-b100);
+  border-radius: 4px;
+  overflow: hidden;
+  z-index: 3;
+}
+
+.user-search__result {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  height: 50px;
+  background-color: var(--color-neutral-w100);
+}
+
+.user-search__result:hover {
+  cursor: pointer;
+  background-color: var(--color-neutral-b200);
+}
+
+.user-search__result__image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-search__result__img {
+  height: 50px;
+  margin-bottom: 0;
+}
+
+.user-search__result__text__heading {
+  margin-bottom: 0;
+}
+
+.user-search__result__text__price {
+  margin-bottom: 0;
+}
+
+.header-section__buttons {
+  display: flex;
+  gap: 32px;
+}
+
+.header-section__button {
+  background: none;
+  border: none;
+  padding: 0;
+  max-height: 18px;
+}
+
+.header-section__button:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}

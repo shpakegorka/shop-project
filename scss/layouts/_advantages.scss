@@ -1,0 +1,38 @@
+@use '../utils/variables' as var;
+
+.advantages-section {
+  @include var.tablet {margin-bottom: 72px;};
+}
+
+.advantages-section__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 10px;
+  @include var.tablet {
+    justify-content: space-between;
+    gap: 0;
+    flex-direction: row;
+    justify-content: center
+  };
+}
+
+.advantages-section__list__item {
+  margin-bottom: 30px;
+  width: 50%;
+  text-align:center;
+  @include var.tablet {
+    margin-bottom: 0;
+    flex-basis: 328px;
+    text-align: start;
+    padding: 16px 56px 50px 0;
+  }
+}
+
+.advantages-section__list__item__image {
+  margin-bottom: 24px;
+}
+
+.advantages-section__list__item__heading {
+  margin-bottom: 12px;
+}

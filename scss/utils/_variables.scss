@@ -1,0 +1,88 @@
+:root {
+  --color-primary-b900: #4078FF;
+  --color-primary-b800: #5C83FF;
+  --color-primary-b700: #728FFF;
+  --color-primary-b600: #869AFF;
+  --color-primary-b500: #97A6FF;
+  --color-primary-b400: #A8B2FF;
+  --color-primary-b300: #B7BFFF;
+  --color-primary-b200: #E3E5FF;
+  --color-primary-b100: #F0F1FF;
+
+  --color-neutral-b900: #0E1422;
+  --color-neutral-b700: #333845;
+  --color-neutral-b600: #474B57;
+  --color-neutral-b500: #5C5F6A;
+  --color-neutral-b400: #71747E;
+  --color-neutral-b300: #878A92;
+  --color-neutral-b200: #B6B7BC;
+  --color-neutral-b100: #E6E7E8;
+
+  --color-neutral-w200: #E9E9EB;
+  --color-neutral-w100: #F6F6F6;
+  --color-neutral-w900: #FFFFFF;
+
+  --color-semantic-blue-b900: #306CEF;
+  --color-semantic-blue-b800: #477CF1;
+  --color-semantic-blue-b700: #5E8CF3;
+  --color-semantic-blue-b600: #759DF4;
+  --color-semantic-blue-b500: #8CADF6;
+  --color-semantic-blue-b400: #A3BEF8;
+  --color-semantic-blue-b300: #BACEFA;
+  --color-semantic-blue-b200: #D1DEFB;
+  --color-semantic-blue-b100: #E8EFFD;
+
+  --color-semantic-green-g900: #057234;
+  --color-semantic-green-g800: #2C7F45;
+  --color-semantic-green-g700: #458B56;
+  --color-semantic-green-g600: #5A9868;
+  --color-semantic-green-g500: #6FA479;
+  --color-semantic-green-g400: #83B18B;
+  --color-semantic-green-g300: #98BE9E;
+  --color-semantic-green-g200: #C1D8C4;
+  --color-semantic-green-g100: #D5E5D7;
+
+  --color-semantic-red-r900: #BE1313;
+  --color-semantic-red-r800: #C83727;
+  --color-semantic-red-r700: #D14F3A;
+  --color-semantic-red-r600: #D9644E;
+  --color-semantic-red-r500: #E17862;
+  --color-semantic-red-r400: #E88C77;
+  --color-semantic-red-r300: #EE9F8D;
+  --color-semantic-red-r200: #F8C5B9;
+  --color-semantic-red-r100: #FBD9D0;
+
+  --color-semantic-yellow-y900: #F3B40A;
+  --color-semantic-yellow-y800: #F6BB33;
+  --color-semantic-yellow-y700: #F9C14C;
+  --color-semantic-yellow-y600: #FBC862;
+  --color-semantic-yellow-y500: #FDCF76;
+  --color-semantic-yellow-y400: #FFD58A;
+  --color-semantic-yellow-y300: #FFDC9E;
+  --color-semantic-yellow-y200: #FFEAC4;
+  --color-semantic-yellow-y100: #FFF1D8;
+
+  --color-primary-brown-b100: #48321C;
+}
+
+  $bp-mobile: 480px;
+  $bp-tablet: 768px;
+  $bp-desktop: 1280px;
+
+    @mixin desktop {
+      @media screen and (min-width: $bp-desktop) {
+        @content;
+      }
+    }
+
+      @mixin tablet {
+    @media screen and (min-width: $bp-tablet) {
+      @content;
+    }
+  }
+
+  @mixin mobile {
+    @media screen and (min-width: $bp-mobile) {
+      @content;
+    }
+  }

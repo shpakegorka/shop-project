@@ -1,0 +1,99 @@
+@use './utils/variables' as var;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+span {
+  margin-top: 0;
+}
+
+.container {
+  padding: 0 2px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1140px;
+  @include var.tablet {
+      padding: 0 24px;
+    }
+  
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-neutral-b900);
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* ТИПОГРАФІКА */
+h1 {
+  font-family: 'Inter', sans-serif;
+  font-size: 40px;
+  line-height: 150%;
+  font-weight: 600;
+}
+
+h2 {
+  font-family: 'Inter', sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+h3 {
+  font-family: 'Inter', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+h4 {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+h5 {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+h6 {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+p,
+a,
+button,
+span {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  line-height: 175%;
+  font-weight: 400;
+  color: var(--color-neutral-b400);
+  margin-bottom: 0;
+}
+
+label {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  line-height: 24px;
+  font-weight: 500;
+  color: var(--color-neutral-b300);
+}

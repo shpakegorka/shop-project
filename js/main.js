@@ -4,6 +4,7 @@ import { initQuantityButton } from './quantityButton.js';
 import { initTabsSwiper } from './tabsSwiper.js';
 import { initSearch } from './search.js';
 import { initReviewSystem } from './reviewSystem.js';
+import { burgerMenu } from './burgerButton.js';
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -14,5 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initTabsSwiper();
   initSearch();
   initReviewSystem();
+  burgerMenu();
 
 }); // КІНЕЦЬ DOMContentLoaded

@@ -1,0 +1,328 @@
+// scss/components/_sidebar-filters.scss
+
+.left-bar {
+  flex-grow: 1;
+  border: 1px solid var(--color-neutral-b100);
+  border-radius: 5px;
+  height: fit-content;
+  padding: 24px 14px 32px 18px;
+  max-width: 248px;
+
+  /* Блок категорій */
+  &__categories {
+    &__heading {
+      margin-bottom: 16px;
+    }
+
+    &__list {
+      padding: 0;
+
+      &__item {
+        padding: 12px 0 12px 4px;
+
+        &::after {
+          content: " ";
+          display: block;
+          width: 200px;
+          height: 0px;
+          box-shadow: 0px 12px 0px 0.5px var(--color-neutral-w200);
+        }
+
+        input[type="checkbox"] {
+          position: absolute;
+          width: 1px;
+          height: 1px;
+          padding: 0;
+          margin: -1px;
+          overflow: hidden;
+          clip: rect(0, 0, 0, 0);
+          border: 0;
+        }
+
+        &__label {
+          display: flex;
+          align-items: center;
+          font-family: 'Inter', sans-serif;
+          font-size: 14px;
+          font-weight: 400;
+          color: var(--color-neutral-b600);
+
+          &:hover {
+            cursor: pointer;
+          }
+
+          &::before {
+            content: "";
+            display: inline-block;
+            flex-shrink: 0;
+            width: 18px;
+            height: 18px;
+            margin-right: 10px;
+            border: 2px solid var(--color-neutral-b100);
+            border-radius: 3px;
+            background-color: var(--color-neutral-w900);
+          }
+        }
+      }
+    }
+
+    &__input:checked+label::before {
+      background-image: url(/images/svg/select-box.svg);
+      border: 2px solid var(--color-neutral-w900);
+    }
+  }
+
+  /* Блок фільтру по кольорах */
+  &__color {
+    margin-bottom: 40px;
+
+    &__heading {
+      margin-bottom: 12px;
+    }
+
+    &__checkbox {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+
+      &:checked+.left-bar__color__label::before {
+        box-shadow: 0 0 0 3px var(--color-neutral-w900), 0 0 0 5px var(--color-neutral-b900);
+      }
+    }
+
+    &__label {
+      &:hover {
+        cursor: pointer;
+      }
+
+      &::before {
+        content: "";
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        border-radius: 25px;
+      }
+    }
+
+    /* Кольорові модифікатори */
+    &__semantic-blue::before {
+      background-color: var(--color-semantic-blue-b400);
+    }
+
+    &__semantic-yellow::before {
+      background-color: var(--color-semantic-yellow-y400);
+    }
+
+    &__primary-blue::before {
+      background-color: var(--color-primary-b900);
+    }
+
+    &__semantic-green::before {
+      background-color: var(--color-semantic-green-g400);
+    }
+
+    &__primary-brown::before {
+      background-color: var(--color-primary-brown-b100);
+    }
+
+    &__primary-dark::before {
+      background-color: var(--color-neutral-b900);
+    }
+
+    &__primary-white::before {
+      background-color: var(--color-neutral-w100);
+    }
+  }
+
+  /* Блок фільтру по розмірах */
+  &__size {
+    &__heading {
+      margin-bottom: 12px;
+    }
+
+    &__container {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      overflow: hidden;
+      max-width: 200px;
+      margin-bottom: 40px;
+    }
+
+    &__checkbox {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+
+      &:checked+.left-bar__size__checkbox__label {
+        color: var(--color-neutral-b900);
+        border-color: var(--color-neutral-b900);
+      }
+    }
+
+    &__checkbox__label {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 40px;
+      width: 40px;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--color-neutral-b500);
+      border: 1px solid var(--color-neutral-b100);
+      border-radius: 4px;
+
+      &:hover {
+        cursor: pointer;
+        color: var(--color-neutral-b900);
+        border-color: var(--color-neutral-b900);
+      }
+    }
+  }
+
+  /* Фільтр ціни */
+  &__price {
+    max-height: 104px;
+    max-width: 216px;
+    margin-bottom: 30px;
+  }
+}
+
+/* Контейнери елементів палітри */
+.colors__container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+/* Кастомний слайдер ціни та інпути */
+.price-slider-container {
+  position: relative;
+  width: 100%;
+  height: 16px;
+  margin-bottom: 20px;
+
+  .slider-track {
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: var(--color-neutral-b100);
+    border-radius: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+  }
+
+  .slider-progress {
+    position: absolute;
+    height: 6px;
+    background-color: var(--color-neutral-b300);
+    border-radius: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+  }
+
+  input[type="range"] {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: none;
+    pointer-events: none;
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+    padding: 0;
+
+    &::-webkit-slider-thumb {
+      position: relative;
+      -webkit-appearance: none;
+      appearance: none;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background-color: var(--color-neutral-b900);
+      cursor: pointer;
+      pointer-events: auto;
+      border: none;
+      box-shadow: 0 0 0 2px var(--color-neutral-w900);
+      z-index: 3;
+    }
+
+    &::-moz-range-thumb {
+      position: relative;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: var(--color-neutral-b900);
+      cursor: pointer;
+      pointer-events: auto;
+      border: none;
+      box-shadow: 0 0 0 2px var(--color-neutral-w900);
+      z-index: 3;
+    }
+  }
+}
+
+.price-tooltip__input {
+  display: flex;
+  max-width: 216px;
+  gap: 50px;
+  padding: 0 10px;
+}
+
+.price__input {
+  text-align: center;
+  width: 100%;
+  font-family: "Inter", sans-serif;
+  border: 1px solid var(--color-neutral-b500);
+  border-radius: 4px;
+  -moz-appearance: textfield;
+  /* Firefox */
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  &:focus {
+    border-color: var(--color-neutral-b900);
+    outline: none;
+  }
+}
+
+.button__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 216px;
+}
+
+.apply-filters-button {
+  width: 107px;
+  padding: 10px;
+  background: var(--color-neutral-b900);
+  color: var(--color-neutral-w900);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  flex-shrink: 1;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
