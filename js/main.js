@@ -5,6 +5,8 @@ import { initTabsSwiper } from './tabsSwiper.js';
 import { initSearch } from './search.js';
 import { initReviewSystem } from './reviewSystem.js';
 import { burgerMenu } from './burgerButton.js';
+import { addedCart } from './addedCart.js';
+import { initCart } from './initCart.js';
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -16,5 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initSearch();
   initReviewSystem();
   burgerMenu();
+  addedCart();
+  initCart();
 
 }); // КІНЕЦЬ DOMContentLoaded
