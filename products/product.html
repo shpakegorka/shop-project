@@ -47,9 +47,12 @@
         </div>
         <div class="header-section__buttons">
           <button class="header-section__button" type="button">
-            <svg height="18" width="18">
-              <use href="/images/svg/icons.svg#icon-cart_button"></use>
-            </svg>
+            <a href="../cart.html">
+              <svg height="18" width="18">
+                <use href="/images/svg/icons.svg#icon-cart_button">
+                </use>
+              </svg>
+            </a>
           </button>
           <button class="header-section__button" type="button">
             <svg height="18" width="18">
@@ -76,14 +79,11 @@
       <div class="container">
         <div class="product-section__container">
             <div class="product__photo-slider swiper">
-              <!-- Additional required wrapper -->
               <div class="swiper-wrapper">
-                <!-- Slides -->
                 <div class="swiper-slide"><img class="product__photo-slider__image" src="../images/black-t-shirt.png" alt="black-t-shirt"></div>
                 <div class="swiper-slide"><img class="product__photo-slider__image" src="../images/athletic-shirt.png" alt="athletic-shirt"></div>
                 <div class="swiper-slide"><img class="product__photo-slider__image" src="../images/blue-t-shirt.png" alt="blue-t-shirt"></div>
               </div>
-              <!-- If we need pagination -->
               <div class="swiper-pagination"></div>
             </div>
           <div class="product__description">
@@ -94,7 +94,7 @@
             </svg>4.2 – 54 Reviews</span> 
             <span class="section__list__label">IN STOCK</span>
           </div>
-            <h4>$75.00</h4>
+            <h4 class="product-price">$75.00</h4>
             <h6 class="left-bar__color__heading">available colors</h6>
             <div class="colors__container">
               <input class="left-bar__color__checkbox" type="checkbox" id="left-bar__color__semantic-blue"
@@ -195,19 +195,21 @@
               </div>
               <button class="aproduct-section__reviews__button__add" type="submit" id="review-button-added">Add a review</button>
             </div>
-            <div class="dropdown-menu__text aproduct-section__reviews__droptown">
-              <p сlass="dropdown-menu__paragraph">SORT BY</p>
-              <svg class="droptown__toggle__img" height="24" width="24">
-                <use href="/images/svg/icons.svg#icon-Chevron-Down"></use>
-              </svg>
-            </div>
-            <div class="dropdown-menu__container">
-              <ul class="dropdown-menu">
-                <li class="dropdown-menu__item">Date</li>
-                <li class="dropdown-menu__item">Rate</li>
-                <li class="dropdown-menu__item">Relevation</li>
-              </ul>
-            </div>
+            <div class="dropdown-menu__feedbacks__text aproduct-section__reviews__droptown">
+              <div class="dropdown-menu__feedbacks__toggle">
+                <p сlass="dropdown-menu__feedbacks__paragraph">SORT BY</p>
+                <svg class="droptown__toggle__img" height="24" width="24">
+                  <use href="/images/svg/icons.svg#icon-Chevron-Down"></use>
+                </svg>
+                </div>
+                <div class="dropdown-menu__feedbacks__container">
+                  <ul class="dropdown-menu__feedbacks">
+                    <li class="dropdown-menu__feedbacks__item">Date</li>
+                    <li class="dropdown-menu__feedbacks__item">Rate</li>
+                    <li class="dropdown-menu__feedbacks__item">Relevation</li>
+                  </ul>
+                </div>
+              </div>
             <div class="aproduct-section__review__container feedback__container">
               <div class="aproduct-section__review feedback">
                 <img width="48" height="48" src="../images/Avatar.png" alt="">
@@ -485,7 +487,7 @@
         </div>
       </div>
       <div class="footer__ended__container">
-        <p class="footer__ended__text">&copy 2023 DevCut. All rights reserved.</p>
+        <p class="footer__ended__text">&copy 2026 DevCut. All rights reserved.</p>
       </div>
     </div>
   </footer>

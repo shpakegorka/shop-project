@@ -1,13 +1,20 @@
 
-/* Спільна плашка навігації (Хлібні крихти) */
+@use '../utils/variables' as var;
+
 .post__nav__section {
   background-color: var(--color-neutral-w100);
 }
 
 .post__nav {
-  display: inline-block;
-  padding: 15px 12px;
-  margin-bottom: 0;
+  display: none;
+
+  @include var.tablet {
+    display: flex;
+    padding: 15px 12px;
+    margin-bottom: 0;
+    justify-content: flex-start;
+    align-items: center;
+  }
 }
 
 .post__nav__home:hover {

@@ -14,6 +14,7 @@
   flex-direction: column;
   align-items: center;
   gap: 15px;
+  padding: 10px 0;
   @include var.tablet {
     flex-direction: row;
     align-items: flex-start;
@@ -27,10 +28,11 @@
 .pre-footer-section__container__text {
   flex-grow: 1;
   text-align: center;
+  padding: 0 20px;
   @include var.tablet {
     text-align: start;
-  }
-}
+    padding: 0;
+}}
 
 .user-email {
   position: relative;
@@ -86,11 +88,13 @@
   align-items: center;
   gap: 30px;
   margin-bottom: 40px;
+  padding:0 20px;
   @include var.tablet {
     margin-bottom: 104px;
     flex-direction: row;
     gap: 10px;
     align-items: flex-start;
+    padding: 0;
   }
 }
 

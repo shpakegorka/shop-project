@@ -7,6 +7,7 @@ import { initReviewSystem } from './reviewSystem.js';
 import { burgerMenu } from './burgerButton.js';
 import { addedCart } from './addedCart.js';
 import { initCart } from './initCart.js';
+import { radioClick } from './clickRadio.js';
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -20,5 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
   burgerMenu();
   addedCart();
   initCart();
+  radioClick();
 
 }); // КІНЕЦЬ DOMContentLoaded
